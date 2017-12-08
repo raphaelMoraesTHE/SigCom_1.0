@@ -20,8 +20,19 @@ namespace SigCom_1._0
         
         private void frm_CadastroUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'sigcomDataSet.a_usuario'. Você pode movê-la ou removê-la conforme necessário.
-            this.a_usuarioTableAdapter.Fill(this.sigcomDataSet.a_usuario);            
+            popula_Grid();       
+        }
+        public void popula_Grid()
+        {
+            try
+            {
+                DAO.DAO_Usuario usuario_BLL = new DAO.DAO_Usuario();
+                dataGridView1.DataSource = usuario_BLL.lista_Usuario();
+            }
+            catch(Exception erro)
+            {
+                MessageBox.Show("Erro ao listar pacientes " + erro);
+            }
         }
     }
 }
