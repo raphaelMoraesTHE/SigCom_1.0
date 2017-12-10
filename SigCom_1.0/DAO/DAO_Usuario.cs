@@ -18,7 +18,7 @@ namespace SigCom_1._0.DAO
             try
             {
                 conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as codigo, c_nome as nome, c_senha as senha from a_usuario", conexao);
+                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_nome as Nome, c_senha as Senha from a_usuario", conexao);
 
                 List<string> usuario = new List<string>();
 
@@ -51,7 +51,7 @@ namespace SigCom_1._0.DAO
             try
             {
                 conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as codigo, c_nome as nome, c_senha as senha from a_usuario", conexao);
+                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_nome as Nome, c_senha as Senha from a_usuario", conexao);
                 NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
                 dataAdapter.SelectCommand = sql;
 

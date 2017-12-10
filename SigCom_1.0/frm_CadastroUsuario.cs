@@ -27,11 +27,11 @@ namespace SigCom_1._0
             try
             {
                 DAO.DAO_Usuario usuario_BLL = new DAO.DAO_Usuario();
-                dataGridView1.DataSource = usuario_BLL.lista_Usuario();
+                dgv_Usuario.DataSource = usuario_BLL.lista_Usuario();
             }
             catch(Exception erro)
             {
-                MessageBox.Show("Erro ao listar pacientes " + erro);
+                MessageBox.Show("Erro ao listar usuário " + erro);
             }
         }
     }
