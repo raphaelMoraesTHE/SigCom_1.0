@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Npgsql;
+using Model;
 
-namespace SigCom_1._0.DAO
+namespace DAO
 {
-    class DAO_Usuario
+    public class DAO_Usuario
     {
         String conexao_Postgres = @"Server = localhost; Port = 5432; Database = sigcom; User Id = postgres; Password = raphael;";
         NpgsqlConnection conexao = null;
@@ -35,7 +36,7 @@ namespace SigCom_1._0.DAO
                 }
                 return usuario;
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 throw erro;
             }
@@ -43,7 +44,7 @@ namespace SigCom_1._0.DAO
             {
                 conexao.Close();
             }
-            
+
         }//Fim lista usuario
 
         public DataTable lista_Usuario()
@@ -60,7 +61,7 @@ namespace SigCom_1._0.DAO
 
                 return dtUsuario;
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 throw erro;
             }
@@ -84,7 +85,7 @@ namespace SigCom_1._0.DAO
 
                 return dtUsuario;
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 throw erro;
             }
@@ -108,7 +109,7 @@ namespace SigCom_1._0.DAO
 
                 return dtUsuario;
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 throw erro;
             }
@@ -118,13 +119,13 @@ namespace SigCom_1._0.DAO
             }
         }
 
-        public void grava_Usuario(Modelo.ModeloUsuario usuario)
+        public void grava_Usuario(ModeloUsuario usuario)
         {
             try
             {
                 //Uso @ como identificador de variaveis
                 conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("insert into a_usuario (nome, senha) values (@nome, @senha)", conexao);
+                NpgsqlCommand sql = new NpgsqlCommand("insert into a_usuario (c_nome, c_senha) values (@nome, @senha)", conexao);
 
                 sql.Parameters.AddWithValue("@nome", usuario.Nome);
                 sql.Parameters.AddWithValue("@senha", usuario.Senha);
@@ -132,7 +133,7 @@ namespace SigCom_1._0.DAO
                 conexao.Open();
                 sql.ExecuteNonQuery();
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 throw erro;
             }

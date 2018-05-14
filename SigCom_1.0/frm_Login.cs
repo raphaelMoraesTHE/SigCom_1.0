@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
-namespace SigCom_1._0
+namespace GUI
 {
     public partial class frm_Login : Form
     {

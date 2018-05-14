@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SigCom_1._0.Modelo
+namespace Model
 {
-    class ModeloUsuario
+    public class ModeloUsuario
     {
-        int codigo;
-        string nome, senha;
+        private int codigo;
+        private string nome, senha;
 
         public int Codigo { get => codigo; set => codigo = value; }
         public string Nome { get => nome; set => nome = value; }

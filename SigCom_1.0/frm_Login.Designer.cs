@@ -1,4 +1,4 @@
-﻿namespace SigCom_1._0
+﻿namespace GUI
 {
     partial class frm_Login
     {
@@ -45,6 +45,7 @@
             this.btn_Entrar.Size = new System.Drawing.Size(135, 47);
             this.btn_Entrar.TabIndex = 3;
             this.btn_Entrar.Text = "Entrar";
+            this.btn_Entrar.UseCompatibleTextRendering = true;
             this.btn_Entrar.UseVisualStyleBackColor = true;
             this.btn_Entrar.Click += new System.EventHandler(this.btn_Entrar_Click);
             // 
@@ -55,9 +56,10 @@
             this.lbl_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Usuario.Location = new System.Drawing.Point(57, 35);
             this.lbl_Usuario.Name = "lbl_Usuario";
-            this.lbl_Usuario.Size = new System.Drawing.Size(111, 25);
+            this.lbl_Usuario.Size = new System.Drawing.Size(106, 29);
             this.lbl_Usuario.TabIndex = 0;
             this.lbl_Usuario.Text = "Usuário...:";
+            this.lbl_Usuario.UseCompatibleTextRendering = true;
             // 
             // txb_Usuario
             // 
@@ -80,6 +82,7 @@
             this.btn_Cancelar.Size = new System.Drawing.Size(135, 47);
             this.btn_Cancelar.TabIndex = 4;
             this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseCompatibleTextRendering = true;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
@@ -90,9 +93,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(57, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.Size = new System.Drawing.Size(106, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Senha.....:";
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // txb_Senha
             // 

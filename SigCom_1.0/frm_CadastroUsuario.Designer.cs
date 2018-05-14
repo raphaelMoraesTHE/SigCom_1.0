@@ -1,4 +1,4 @@
-﻿namespace SigCom_1._0
+﻿namespace GUI
 {
     partial class frm_CadastroUsuario
     {
@@ -28,57 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroUsuario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.buttonEdit1 = new Syncfusion.Windows.Forms.Tools.ButtonEdit();
+            this.cbx_CaixaUsuario = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
+            this.cbx_LojaUsuario = new System.Windows.Forms.ComboBox();
+            this.tbx_NomeCaixaUsuario = new System.Windows.Forms.TextBox();
+            this.cbx_PerfilAcessoUsuario = new Syncfusion.Windows.Forms.Tools.ButtonEdit();
+            this.buttonEditChildButton1 = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
+            this.txb_ConfirmaSenhaUsuario = new System.Windows.Forms.TextBox();
+            this.txb_SenhaUsuario = new System.Windows.Forms.TextBox();
+            this.txb_SenhaAtualUsuario = new System.Windows.Forms.TextBox();
+            this.txb_NomePerfilAcessoUsuario = new System.Windows.Forms.TextBox();
+            this.txb_NomeLojaUsuario = new System.Windows.Forms.TextBox();
+            this.txb_EmailUsuario = new System.Windows.Forms.TextBox();
+            this.txb_NomeUsuario = new System.Windows.Forms.TextBox();
+            this.txb_DataCadastroUsuario = new System.Windows.Forms.TextBox();
+            this.txb_CodigoUsuario = new System.Windows.Forms.TextBox();
+            this.btn_DefineAlteraSenhaUsuario = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbx_LojaAutorizadasUsuario = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btn_ExcluirUsuarioLoja = new System.Windows.Forms.Button();
+            this.btn_GravarUsuarioLoja = new System.Windows.Forms.Button();
+            this.btn_NovoUsuarioLoja = new System.Windows.Forms.Button();
+            this.dgv_LojasAutorizadasUsuario = new System.Windows.Forms.DataGridView();
+            this.cbx_AtivoInativoUsuario = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dgv_Usuario = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.btn_ImprimirUsuario = new System.Windows.Forms.Button();
+            this.btn_ExcluirUsuario = new System.Windows.Forms.Button();
+            this.btn_AlterarUsuario = new System.Windows.Forms.Button();
+            this.btn_GravarUsuario = new System.Windows.Forms.Button();
+            this.btn_NovoUsuario = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txb_PesquisaUsuario = new System.Windows.Forms.TextBox();
+            this.cbx_PesquisarUsuario = new System.Windows.Forms.ComboBox();
+            this.btn_PesquisarUsuario = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dgv_Usuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1)).BeginInit();
+            this.buttonEdit1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbx_PerfilAcessoUsuario)).BeginInit();
+            this.cbx_PerfilAcessoUsuario.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_LojasAutorizadasUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,237 +97,356 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
-            this.splitContainer1.Panel1.Controls.Add(this.button9);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox10);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonEdit1);
+            this.splitContainer1.Panel1.Controls.Add(this.cbx_LojaUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.tbx_NomeCaixaUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.cbx_PerfilAcessoUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_ConfirmaSenhaUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_SenhaUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_SenhaAtualUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_NomePerfilAcessoUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_NomeLojaUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_EmailUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_NomeUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_DataCadastroUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_CodigoUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_DefineAlteraSenhaUsuario);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox9);
             this.splitContainer1.Panel1.Controls.Add(this.label9);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox6);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
-            this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox5);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox3);
             this.splitContainer1.Panel1.Controls.Add(this.label8);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox8);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox7);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.checkBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox4);
+            this.splitContainer1.Panel1.Controls.Add(this.cbx_AtivoInativoUsuario);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.button5);
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_ImprimirUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_ExcluirUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_AlterarUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_GravarUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_NovoUsuario);
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button10);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox11);
+            this.splitContainer1.Panel2.Controls.Add(this.txb_PesquisaUsuario);
+            this.splitContainer1.Panel2.Controls.Add(this.cbx_PesquisarUsuario);
+            this.splitContainer1.Panel2.Controls.Add(this.btn_PesquisarUsuario);
             this.splitContainer1.Panel2.Controls.Add(this.label13);
-            this.splitContainer1.Panel2.Controls.Add(this.comboBox5);
             this.splitContainer1.Panel2.Controls.Add(this.label12);
             this.splitContainer1.Panel2.Controls.Add(this.dgv_Usuario);
-            this.splitContainer1.Size = new System.Drawing.Size(1232, 768);
-            this.splitContainer1.SplitterDistance = 254;
+            this.splitContainer1.Size = new System.Drawing.Size(1248, 791);
+            this.splitContainer1.SplitterDistance = 260;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button9
+            // buttonEdit1
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(543, 218);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(199, 31);
-            this.button9.TabIndex = 14;
-            this.button9.Text = "Definir/Alterar Senha";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonEdit1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonEdit1.BeforeTouchSize = new System.Drawing.Size(59, 28);
+            this.buttonEdit1.Buttons.Add(this.cbx_CaixaUsuario);
+            this.buttonEdit1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Colorful;
+            this.buttonEdit1.Controls.Add(this.cbx_CaixaUsuario);
+            this.buttonEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit1.Location = new System.Drawing.Point(563, 66);
+            this.buttonEdit1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.buttonEdit1.Name = "buttonEdit1";
+            this.buttonEdit1.ShowTextBox = false;
+            this.buttonEdit1.Size = new System.Drawing.Size(59, 28);
+            this.buttonEdit1.TabIndex = 42;
+            this.buttonEdit1.UseVisualStyle = true;
             // 
-            // textBox10
+            // cbx_CaixaUsuario
             // 
-            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox10.Location = new System.Drawing.Point(370, 220);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(167, 27);
-            this.textBox10.TabIndex = 13;
-            this.textBox10.UseSystemPasswordChar = true;
+            this.cbx_CaixaUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.cbx_CaixaUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cbx_CaixaUsuario.BeforeTouchSize = new System.Drawing.Size(20, 24);
+            this.cbx_CaixaUsuario.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
+            this.cbx_CaixaUsuario.ComboEditBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbx_CaixaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_CaixaUsuario.Image = null;
+            this.cbx_CaixaUsuario.IsBackStageButton = false;
+            this.cbx_CaixaUsuario.Margin = new System.Windows.Forms.Padding(0);
+            this.cbx_CaixaUsuario.Name = "cbx_CaixaUsuario";
+            this.cbx_CaixaUsuario.PreferredWidth = 20;
+            this.cbx_CaixaUsuario.TabIndex = 1;
+            this.cbx_CaixaUsuario.UseCompatibleTextRendering = true;
+            this.cbx_CaixaUsuario.UseVisualStyleBackColor = false;
+            this.cbx_CaixaUsuario.Click += new System.EventHandler(this.cbx_CaixaUsuario_Click);
+            // 
+            // cbx_LojaUsuario
+            // 
+            this.cbx_LojaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_LojaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbx_LojaUsuario.FormattingEnabled = true;
+            this.cbx_LojaUsuario.Items.AddRange(new object[] {
+            "0"});
+            this.cbx_LojaUsuario.Location = new System.Drawing.Point(301, 67);
+            this.cbx_LojaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbx_LojaUsuario.Name = "cbx_LojaUsuario";
+            this.cbx_LojaUsuario.Size = new System.Drawing.Size(56, 28);
+            this.cbx_LojaUsuario.TabIndex = 8;
+            this.cbx_LojaUsuario.SelectedIndexChanged += new System.EventHandler(this.cbx_LojaUsuario_SelectedIndexChanged);
+            // 
+            // tbx_NomeCaixaUsuario
+            // 
+            this.tbx_NomeCaixaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbx_NomeCaixaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_NomeCaixaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.tbx_NomeCaixaUsuario.Location = new System.Drawing.Point(623, 67);
+            this.tbx_NomeCaixaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_NomeCaixaUsuario.Name = "tbx_NomeCaixaUsuario";
+            this.tbx_NomeCaixaUsuario.ReadOnly = true;
+            this.tbx_NomeCaixaUsuario.Size = new System.Drawing.Size(199, 27);
+            this.tbx_NomeCaixaUsuario.TabIndex = 41;
+            this.tbx_NomeCaixaUsuario.TabStop = false;
+            // 
+            // cbx_PerfilAcessoUsuario
+            // 
+            this.cbx_PerfilAcessoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbx_PerfilAcessoUsuario.BeforeTouchSize = new System.Drawing.Size(59, 28);
+            this.cbx_PerfilAcessoUsuario.Buttons.Add(this.buttonEditChildButton1);
+            this.cbx_PerfilAcessoUsuario.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Colorful;
+            this.cbx_PerfilAcessoUsuario.Controls.Add(this.buttonEditChildButton1);
+            this.cbx_PerfilAcessoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_PerfilAcessoUsuario.Location = new System.Drawing.Point(563, 120);
+            this.cbx_PerfilAcessoUsuario.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.cbx_PerfilAcessoUsuario.Name = "cbx_PerfilAcessoUsuario";
+            this.cbx_PerfilAcessoUsuario.ShowTextBox = false;
+            this.cbx_PerfilAcessoUsuario.Size = new System.Drawing.Size(59, 28);
+            this.cbx_PerfilAcessoUsuario.TabIndex = 40;
+            this.cbx_PerfilAcessoUsuario.UseVisualStyle = true;
+            // 
+            // buttonEditChildButton1
+            // 
+            this.buttonEditChildButton1.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonEditChildButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonEditChildButton1.BeforeTouchSize = new System.Drawing.Size(20, 24);
+            this.buttonEditChildButton1.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
+            this.buttonEditChildButton1.ComboEditBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonEditChildButton1.Image = null;
+            this.buttonEditChildButton1.IsBackStageButton = false;
+            this.buttonEditChildButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEditChildButton1.Name = "buttonEditChildButton1";
+            this.buttonEditChildButton1.PreferredWidth = 20;
+            this.buttonEditChildButton1.TabIndex = 1;
+            this.buttonEditChildButton1.UseCompatibleTextRendering = true;
+            this.buttonEditChildButton1.UseVisualStyleBackColor = false;
+            this.buttonEditChildButton1.Click += new System.EventHandler(this.buttonEditChildButton1_Click);
+            // 
+            // txb_ConfirmaSenhaUsuario
+            // 
+            this.txb_ConfirmaSenhaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_ConfirmaSenhaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ConfirmaSenhaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_ConfirmaSenhaUsuario.Location = new System.Drawing.Point(371, 220);
+            this.txb_ConfirmaSenhaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_ConfirmaSenhaUsuario.Name = "txb_ConfirmaSenhaUsuario";
+            this.txb_ConfirmaSenhaUsuario.Size = new System.Drawing.Size(167, 27);
+            this.txb_ConfirmaSenhaUsuario.TabIndex = 13;
+            this.txb_ConfirmaSenhaUsuario.UseSystemPasswordChar = true;
+            // 
+            // txb_SenhaUsuario
+            // 
+            this.txb_SenhaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_SenhaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_SenhaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_SenhaUsuario.Location = new System.Drawing.Point(195, 220);
+            this.txb_SenhaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_SenhaUsuario.Name = "txb_SenhaUsuario";
+            this.txb_SenhaUsuario.Size = new System.Drawing.Size(167, 27);
+            this.txb_SenhaUsuario.TabIndex = 12;
+            this.txb_SenhaUsuario.UseSystemPasswordChar = true;
+            // 
+            // txb_SenhaAtualUsuario
+            // 
+            this.txb_SenhaAtualUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_SenhaAtualUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_SenhaAtualUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_SenhaAtualUsuario.Location = new System.Drawing.Point(21, 220);
+            this.txb_SenhaAtualUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_SenhaAtualUsuario.Name = "txb_SenhaAtualUsuario";
+            this.txb_SenhaAtualUsuario.Size = new System.Drawing.Size(167, 27);
+            this.txb_SenhaAtualUsuario.TabIndex = 11;
+            this.txb_SenhaAtualUsuario.UseSystemPasswordChar = true;
+            // 
+            // txb_NomePerfilAcessoUsuario
+            // 
+            this.txb_NomePerfilAcessoUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_NomePerfilAcessoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NomePerfilAcessoUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_NomePerfilAcessoUsuario.Location = new System.Drawing.Point(623, 120);
+            this.txb_NomePerfilAcessoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_NomePerfilAcessoUsuario.Name = "txb_NomePerfilAcessoUsuario";
+            this.txb_NomePerfilAcessoUsuario.ReadOnly = true;
+            this.txb_NomePerfilAcessoUsuario.Size = new System.Drawing.Size(199, 27);
+            this.txb_NomePerfilAcessoUsuario.TabIndex = 0;
+            this.txb_NomePerfilAcessoUsuario.TabStop = false;
+            // 
+            // txb_NomeLojaUsuario
+            // 
+            this.txb_NomeLojaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_NomeLojaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NomeLojaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_NomeLojaUsuario.Location = new System.Drawing.Point(364, 67);
+            this.txb_NomeLojaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_NomeLojaUsuario.Name = "txb_NomeLojaUsuario";
+            this.txb_NomeLojaUsuario.ReadOnly = true;
+            this.txb_NomeLojaUsuario.Size = new System.Drawing.Size(191, 27);
+            this.txb_NomeLojaUsuario.TabIndex = 0;
+            this.txb_NomeLojaUsuario.TabStop = false;
+            // 
+            // txb_EmailUsuario
+            // 
+            this.txb_EmailUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_EmailUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_EmailUsuario.Location = new System.Drawing.Point(21, 170);
+            this.txb_EmailUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_EmailUsuario.Name = "txb_EmailUsuario";
+            this.txb_EmailUsuario.Size = new System.Drawing.Size(533, 27);
+            this.txb_EmailUsuario.TabIndex = 7;
+            // 
+            // txb_NomeUsuario
+            // 
+            this.txb_NomeUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_NomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NomeUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_NomeUsuario.Location = new System.Drawing.Point(21, 120);
+            this.txb_NomeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_NomeUsuario.Name = "txb_NomeUsuario";
+            this.txb_NomeUsuario.Size = new System.Drawing.Size(533, 27);
+            this.txb_NomeUsuario.TabIndex = 6;
+            // 
+            // txb_DataCadastroUsuario
+            // 
+            this.txb_DataCadastroUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_DataCadastroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_DataCadastroUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_DataCadastroUsuario.Location = new System.Drawing.Point(132, 67);
+            this.txb_DataCadastroUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_DataCadastroUsuario.Name = "txb_DataCadastroUsuario";
+            this.txb_DataCadastroUsuario.ReadOnly = true;
+            this.txb_DataCadastroUsuario.Size = new System.Drawing.Size(163, 27);
+            this.txb_DataCadastroUsuario.TabIndex = 0;
+            this.txb_DataCadastroUsuario.TabStop = false;
+            // 
+            // txb_CodigoUsuario
+            // 
+            this.txb_CodigoUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_CodigoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_CodigoUsuario.ForeColor = System.Drawing.Color.Red;
+            this.txb_CodigoUsuario.Location = new System.Drawing.Point(21, 67);
+            this.txb_CodigoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_CodigoUsuario.Name = "txb_CodigoUsuario";
+            this.txb_CodigoUsuario.ReadOnly = true;
+            this.txb_CodigoUsuario.Size = new System.Drawing.Size(100, 27);
+            this.txb_CodigoUsuario.TabIndex = 0;
+            this.txb_CodigoUsuario.TabStop = false;
+            // 
+            // btn_DefineAlteraSenhaUsuario
+            // 
+            this.btn_DefineAlteraSenhaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DefineAlteraSenhaUsuario.Location = new System.Drawing.Point(543, 218);
+            this.btn_DefineAlteraSenhaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DefineAlteraSenhaUsuario.Name = "btn_DefineAlteraSenhaUsuario";
+            this.btn_DefineAlteraSenhaUsuario.Size = new System.Drawing.Size(199, 31);
+            this.btn_DefineAlteraSenhaUsuario.TabIndex = 14;
+            this.btn_DefineAlteraSenhaUsuario.Text = "Definir/Alterar Senha";
+            this.btn_DefineAlteraSenhaUsuario.UseCompatibleTextRendering = true;
+            this.btn_DefineAlteraSenhaUsuario.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(367, 200);
+            this.label11.Location = new System.Drawing.Point(367, 199);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 20);
+            this.label11.Size = new System.Drawing.Size(137, 25);
             this.label11.TabIndex = 38;
             this.label11.Text = "Confirma Senha";
-            // 
-            // textBox9
-            // 
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox9.Location = new System.Drawing.Point(194, 220);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(167, 27);
-            this.textBox9.TabIndex = 12;
-            this.textBox9.UseSystemPasswordChar = true;
+            this.label11.UseCompatibleTextRendering = true;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(191, 200);
+            this.label9.Location = new System.Drawing.Point(191, 199);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 20);
+            this.label9.Size = new System.Drawing.Size(59, 25);
             this.label9.TabIndex = 36;
             this.label9.Text = "Senha";
-            // 
-            // textBox6
-            // 
-            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox6.Location = new System.Drawing.Point(21, 220);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(167, 27);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.UseSystemPasswordChar = true;
+            this.label9.UseCompatibleTextRendering = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 200);
+            this.label6.Location = new System.Drawing.Point(19, 199);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 20);
+            this.label6.Size = new System.Drawing.Size(105, 25);
             this.label6.TabIndex = 34;
             this.label6.Text = "Senha Atual";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(556, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 20);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Perfil de Acesso";
-            // 
-            // textBox5
-            // 
-            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox5.Location = new System.Drawing.Point(626, 120);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(149, 27);
-            this.textBox5.TabIndex = 0;
-            this.textBox5.TabStop = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(563, 120);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(56, 28);
-            this.comboBox3.TabIndex = 10;
+            this.label6.UseCompatibleTextRendering = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(556, 44);
+            this.label8.Location = new System.Drawing.Point(556, 42);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 20);
+            this.label8.Size = new System.Drawing.Size(116, 25);
             this.label8.TabIndex = 30;
             this.label8.Text = "Caixa Padrão";
-            // 
-            // textBox8
-            // 
-            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox8.Location = new System.Drawing.Point(623, 68);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(149, 27);
-            this.textBox8.TabIndex = 0;
-            this.textBox8.TabStop = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(560, 67);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(56, 28);
-            this.comboBox2.TabIndex = 9;
+            this.label8.UseCompatibleTextRendering = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(297, 43);
+            this.label7.Location = new System.Drawing.Point(297, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.Size = new System.Drawing.Size(104, 25);
             this.label7.TabIndex = 27;
             this.label7.Text = "Loja Padrão";
-            // 
-            // textBox7
-            // 
-            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox7.Location = new System.Drawing.Point(364, 67);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(190, 27);
-            this.textBox7.TabIndex = 0;
-            this.textBox7.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(301, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 28);
-            this.comboBox1.TabIndex = 8;
+            this.label7.UseCompatibleTextRendering = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbx_LojaAutorizadasUsuario);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.btn_ExcluirUsuarioLoja);
+            this.groupBox1.Controls.Add(this.btn_GravarUsuarioLoja);
+            this.groupBox1.Controls.Add(this.btn_NovoUsuarioLoja);
+            this.groupBox1.Controls.Add(this.dgv_LojasAutorizadasUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(840, 12);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(380, 239);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lojas Autorizadas";
+            this.groupBox1.UseCompatibleTextRendering = true;
+            // 
+            // cbx_LojaAutorizadasUsuario
+            // 
+            this.cbx_LojaAutorizadasUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_LojaAutorizadasUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbx_LojaAutorizadasUsuario.FormattingEnabled = true;
+            this.cbx_LojaAutorizadasUsuario.Location = new System.Drawing.Point(273, 153);
+            this.cbx_LojaAutorizadasUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbx_LojaAutorizadasUsuario.Name = "cbx_LojaAutorizadasUsuario";
+            this.cbx_LojaAutorizadasUsuario.Size = new System.Drawing.Size(97, 28);
+            this.cbx_LojaAutorizadasUsuario.TabIndex = 19;
             // 
             // label10
             // 
@@ -325,79 +454,70 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(273, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
+            this.label10.Size = new System.Drawing.Size(50, 25);
             this.label10.TabIndex = 38;
             this.label10.Text = "Lojas";
+            this.label10.UseCompatibleTextRendering = true;
             // 
-            // comboBox4
+            // btn_ExcluirUsuarioLoja
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(273, 152);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(97, 28);
-            this.comboBox4.TabIndex = 19;
+            this.btn_ExcluirUsuarioLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ExcluirUsuarioLoja.Location = new System.Drawing.Point(273, 95);
+            this.btn_ExcluirUsuarioLoja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ExcluirUsuarioLoja.Name = "btn_ExcluirUsuarioLoja";
+            this.btn_ExcluirUsuarioLoja.Size = new System.Drawing.Size(97, 31);
+            this.btn_ExcluirUsuarioLoja.TabIndex = 18;
+            this.btn_ExcluirUsuarioLoja.Text = "Excluir";
+            this.btn_ExcluirUsuarioLoja.UseCompatibleTextRendering = true;
+            this.btn_ExcluirUsuarioLoja.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn_GravarUsuarioLoja
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(273, 95);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(97, 31);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "Excluir";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_GravarUsuarioLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GravarUsuarioLoja.Location = new System.Drawing.Point(273, 58);
+            this.btn_GravarUsuarioLoja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GravarUsuarioLoja.Name = "btn_GravarUsuarioLoja";
+            this.btn_GravarUsuarioLoja.Size = new System.Drawing.Size(97, 31);
+            this.btn_GravarUsuarioLoja.TabIndex = 17;
+            this.btn_GravarUsuarioLoja.Text = "Gravar";
+            this.btn_GravarUsuarioLoja.UseCompatibleTextRendering = true;
+            this.btn_GravarUsuarioLoja.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_NovoUsuarioLoja
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(273, 58);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(97, 31);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "Gravar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_NovoUsuarioLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NovoUsuarioLoja.Location = new System.Drawing.Point(273, 21);
+            this.btn_NovoUsuarioLoja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NovoUsuarioLoja.Name = "btn_NovoUsuarioLoja";
+            this.btn_NovoUsuarioLoja.Size = new System.Drawing.Size(97, 31);
+            this.btn_NovoUsuarioLoja.TabIndex = 16;
+            this.btn_NovoUsuarioLoja.Text = "Novo";
+            this.btn_NovoUsuarioLoja.UseCompatibleTextRendering = true;
+            this.btn_NovoUsuarioLoja.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // dgv_LojasAutorizadasUsuario
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(273, 21);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(97, 31);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "Novo";
-            this.button6.UseVisualStyleBackColor = true;
+            this.dgv_LojasAutorizadasUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_LojasAutorizadasUsuario.Location = new System.Drawing.Point(5, 21);
+            this.dgv_LojasAutorizadasUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_LojasAutorizadasUsuario.Name = "dgv_LojasAutorizadasUsuario";
+            this.dgv_LojasAutorizadasUsuario.RowTemplate.Height = 24;
+            this.dgv_LojasAutorizadasUsuario.Size = new System.Drawing.Size(261, 212);
+            this.dgv_LojasAutorizadasUsuario.TabIndex = 0;
+            this.dgv_LojasAutorizadasUsuario.TabStop = false;
             // 
-            // dataGridView1
+            // cbx_AtivoInativoUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(261, 212);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(748, 226);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 24);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "Inativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox4.Location = new System.Drawing.Point(21, 170);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(533, 27);
-            this.textBox4.TabIndex = 7;
+            this.cbx_AtivoInativoUsuario.AutoSize = true;
+            this.cbx_AtivoInativoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_AtivoInativoUsuario.Location = new System.Drawing.Point(748, 226);
+            this.cbx_AtivoInativoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbx_AtivoInativoUsuario.Name = "cbx_AtivoInativoUsuario";
+            this.cbx_AtivoInativoUsuario.Size = new System.Drawing.Size(82, 26);
+            this.cbx_AtivoInativoUsuario.TabIndex = 15;
+            this.cbx_AtivoInativoUsuario.Text = "Inativo";
+            this.cbx_AtivoInativoUsuario.UseCompatibleTextRendering = true;
+            this.cbx_AtivoInativoUsuario.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -405,123 +525,172 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(17, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.Size = new System.Drawing.Size(58, 25);
             this.label4.TabIndex = 17;
             this.label4.Text = "E-mail";
-            // 
-            // textBox3
-            // 
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox3.Location = new System.Drawing.Point(21, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(533, 27);
-            this.textBox3.TabIndex = 6;
+            this.label4.UseCompatibleTextRendering = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 96);
+            this.label3.Location = new System.Drawing.Point(19, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 20);
+            this.label3.Size = new System.Drawing.Size(147, 25);
             this.label3.TabIndex = 15;
             this.label3.Text = "Nome do Usuário";
-            // 
-            // textBox2
-            // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox2.Location = new System.Drawing.Point(132, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(163, 27);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.TabStop = false;
+            this.label3.UseCompatibleTextRendering = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 43);
+            this.label2.Location = new System.Drawing.Point(128, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 20);
+            this.label2.Size = new System.Drawing.Size(123, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Data Cadastro";
-            // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox1.Location = new System.Drawing.Point(21, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TabStop = false;
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 43);
+            this.label1.Location = new System.Drawing.Point(19, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(64, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "Código";
+            this.label1.UseCompatibleTextRendering = true;
             // 
-            // button5
+            // btn_ImprimirUsuario
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(425, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(97, 31);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Imprimir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_ImprimirUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ImprimirUsuario.Location = new System.Drawing.Point(425, 4);
+            this.btn_ImprimirUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ImprimirUsuario.Name = "btn_ImprimirUsuario";
+            this.btn_ImprimirUsuario.Size = new System.Drawing.Size(97, 31);
+            this.btn_ImprimirUsuario.TabIndex = 5;
+            this.btn_ImprimirUsuario.Text = "Imprimir";
+            this.btn_ImprimirUsuario.UseCompatibleTextRendering = true;
+            this.btn_ImprimirUsuario.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_ExcluirUsuario
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(322, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 31);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_ExcluirUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ExcluirUsuario.Location = new System.Drawing.Point(323, 4);
+            this.btn_ExcluirUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ExcluirUsuario.Name = "btn_ExcluirUsuario";
+            this.btn_ExcluirUsuario.Size = new System.Drawing.Size(97, 31);
+            this.btn_ExcluirUsuario.TabIndex = 4;
+            this.btn_ExcluirUsuario.Text = "Excluir";
+            this.btn_ExcluirUsuario.UseCompatibleTextRendering = true;
+            this.btn_ExcluirUsuario.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_AlterarUsuario
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(219, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 31);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Alterar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_AlterarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AlterarUsuario.Location = new System.Drawing.Point(219, 4);
+            this.btn_AlterarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_AlterarUsuario.Name = "btn_AlterarUsuario";
+            this.btn_AlterarUsuario.Size = new System.Drawing.Size(97, 31);
+            this.btn_AlterarUsuario.TabIndex = 3;
+            this.btn_AlterarUsuario.Text = "Alterar";
+            this.btn_AlterarUsuario.UseCompatibleTextRendering = true;
+            this.btn_AlterarUsuario.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_GravarUsuario
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(116, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Gravar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_GravarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GravarUsuario.Location = new System.Drawing.Point(116, 4);
+            this.btn_GravarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GravarUsuario.Name = "btn_GravarUsuario";
+            this.btn_GravarUsuario.Size = new System.Drawing.Size(97, 31);
+            this.btn_GravarUsuario.TabIndex = 2;
+            this.btn_GravarUsuario.Text = "Gravar";
+            this.btn_GravarUsuario.UseCompatibleTextRendering = true;
+            this.btn_GravarUsuario.UseVisualStyleBackColor = true;
+            this.btn_GravarUsuario.Click += new System.EventHandler(this.btn_GravarUsuario_Click);
             // 
-            // button1
+            // btn_NovoUsuario
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 31);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_NovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NovoUsuario.Location = new System.Drawing.Point(13, 4);
+            this.btn_NovoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NovoUsuario.Name = "btn_NovoUsuario";
+            this.btn_NovoUsuario.Size = new System.Drawing.Size(97, 31);
+            this.btn_NovoUsuario.TabIndex = 1;
+            this.btn_NovoUsuario.Text = "Novo";
+            this.btn_NovoUsuario.UseCompatibleTextRendering = true;
+            this.btn_NovoUsuario.UseVisualStyleBackColor = true;
+            this.btn_NovoUsuario.Click += new System.EventHandler(this.btn_NovoUsuario_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(557, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 25);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Perfil de Acesso";
+            this.label5.UseCompatibleTextRendering = true;
+            // 
+            // txb_PesquisaUsuario
+            // 
+            this.txb_PesquisaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txb_PesquisaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_PesquisaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txb_PesquisaUsuario.Location = new System.Drawing.Point(401, 478);
+            this.txb_PesquisaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_PesquisaUsuario.Name = "txb_PesquisaUsuario";
+            this.txb_PesquisaUsuario.Size = new System.Drawing.Size(763, 27);
+            this.txb_PesquisaUsuario.TabIndex = 39;
+            // 
+            // cbx_PesquisarUsuario
+            // 
+            this.cbx_PesquisarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_PesquisarUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbx_PesquisarUsuario.FormattingEnabled = true;
+            this.cbx_PesquisarUsuario.Location = new System.Drawing.Point(157, 478);
+            this.cbx_PesquisarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbx_PesquisarUsuario.Name = "cbx_PesquisarUsuario";
+            this.cbx_PesquisarUsuario.Size = new System.Drawing.Size(116, 28);
+            this.cbx_PesquisarUsuario.TabIndex = 39;
+            // 
+            // btn_PesquisarUsuario
+            // 
+            this.btn_PesquisarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PesquisarUsuario.Location = new System.Drawing.Point(1171, 475);
+            this.btn_PesquisarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_PesquisarUsuario.Name = "btn_PesquisarUsuario";
+            this.btn_PesquisarUsuario.Size = new System.Drawing.Size(51, 31);
+            this.btn_PesquisarUsuario.TabIndex = 39;
+            this.btn_PesquisarUsuario.Text = "Ir";
+            this.btn_PesquisarUsuario.UseCompatibleTextRendering = true;
+            this.btn_PesquisarUsuario.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(279, 481);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 25);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Digite Aqui";
+            this.label13.UseCompatibleTextRendering = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(9, 481);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 25);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Pesquisar Por";
+            this.label12.UseCompatibleTextRendering = true;
             // 
             // dgv_Usuario
             // 
@@ -532,86 +701,58 @@
             this.dgv_Usuario.AllowUserToResizeRows = false;
             this.dgv_Usuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_Usuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Usuario.ColumnHeadersHeight = 28;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Usuario.Location = new System.Drawing.Point(0, 0);
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Usuario.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Usuario.Location = new System.Drawing.Point(4, 2);
+            this.dgv_Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Usuario.MultiSelect = false;
             this.dgv_Usuario.Name = "dgv_Usuario";
             this.dgv_Usuario.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Usuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Usuario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv_Usuario.RowTemplate.Height = 24;
             this.dgv_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Usuario.ShowEditingIcon = false;
-            this.dgv_Usuario.Size = new System.Drawing.Size(1232, 466);
+            this.dgv_Usuario.Size = new System.Drawing.Size(1241, 466);
             this.dgv_Usuario.TabIndex = 0;
             this.dgv_Usuario.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(9, 481);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 20);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Pesquisar Por";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(157, 478);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(116, 28);
-            this.comboBox5.TabIndex = 39;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(279, 481);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 20);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Digite Aqui";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox11.Location = new System.Drawing.Point(401, 478);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(763, 27);
-            this.textBox11.TabIndex = 39;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(1170, 475);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 31);
-            this.button10.TabIndex = 39;
-            this.button10.Text = "Ir";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // frm_CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 768);
+            this.ClientSize = new System.Drawing.Size(1248, 791);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_CadastroUsuario";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_CadastroUsuario";
+            this.Text = "Cadastro de Usuários";
             this.Load += new System.EventHandler(this.frm_CadastroUsuario_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -619,9 +760,15 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1)).EndInit();
+            this.buttonEdit1.ResumeLayout(false);
+            this.buttonEdit1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbx_PerfilAcessoUsuario)).EndInit();
+            this.cbx_PerfilAcessoUsuario.ResumeLayout(false);
+            this.cbx_PerfilAcessoUsuario.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_LojasAutorizadasUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuario)).EndInit();
             this.ResumeLayout(false);
 
@@ -630,48 +777,50 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ImprimirUsuario;
+        private System.Windows.Forms.Button btn_ExcluirUsuario;
+        private System.Windows.Forms.Button btn_AlterarUsuario;
+        private System.Windows.Forms.Button btn_GravarUsuario;
+        private System.Windows.Forms.Button btn_NovoUsuario;
         private System.Windows.Forms.DataGridView dgv_Usuario;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txb_SenhaUsuario;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txb_SenhaAtualUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txb_NomePerfilAcessoUsuario;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txb_NomeLojaUsuario;
+        private System.Windows.Forms.ComboBox cbx_LojaUsuario;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cbx_LojaAutorizadasUsuario;
+        private System.Windows.Forms.Button btn_ExcluirUsuarioLoja;
+        private System.Windows.Forms.Button btn_GravarUsuarioLoja;
+        private System.Windows.Forms.Button btn_NovoUsuarioLoja;
+        private System.Windows.Forms.DataGridView dgv_LojasAutorizadasUsuario;
+        private System.Windows.Forms.CheckBox cbx_AtivoInativoUsuario;
+        private System.Windows.Forms.TextBox txb_EmailUsuario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txb_NomeUsuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txb_DataCadastroUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txb_CodigoUsuario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txb_ConfirmaSenhaUsuario;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button btn_DefineAlteraSenhaUsuario;
+        private System.Windows.Forms.Button btn_PesquisarUsuario;
+        private System.Windows.Forms.TextBox txb_PesquisaUsuario;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbx_PesquisarUsuario;
         private System.Windows.Forms.Label label12;
+        private Syncfusion.Windows.Forms.Tools.ButtonEdit cbx_PerfilAcessoUsuario;
+        private Syncfusion.Windows.Forms.Tools.ButtonEditChildButton buttonEditChildButton1;
+        private Syncfusion.Windows.Forms.Tools.ButtonEdit buttonEdit1;
+        private Syncfusion.Windows.Forms.Tools.ButtonEditChildButton cbx_CaixaUsuario;
+        private System.Windows.Forms.TextBox tbx_NomeCaixaUsuario;
     }
 }

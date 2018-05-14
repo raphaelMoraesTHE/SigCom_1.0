@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SigCom_1._0
+namespace GUI
 {
     static class Program
     {

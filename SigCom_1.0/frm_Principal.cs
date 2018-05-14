@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SigCom_1._0
+namespace GUI
 {
     public partial class frm_Principal : Form
     {
@@ -34,7 +34,9 @@ namespace SigCom_1._0
         private void cadastroDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_CadastroUsuario formularioCadastroUsuario = new frm_CadastroUsuario();
-            formularioCadastroUsuario.Show();
+            formularioCadastroUsuario.ShowDialog();
         }
+
+        
     }
 }
