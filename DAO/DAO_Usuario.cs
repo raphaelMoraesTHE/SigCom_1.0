@@ -19,7 +19,7 @@ namespace DAO
             try
             {
                 conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_nome as Nome, c_senha as Senha from a_usuario", conexao);
+                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_filial as Filial, c_nome as Nome, c_senha as Senha from a_usuario", conexao);
 
                 List<string> usuario = new List<string>();
 
@@ -33,6 +33,7 @@ namespace DAO
                     usuario.Add(lerDados["codigo"].ToString());
                     usuario.Add(lerDados["nome"].ToString());
                     usuario.Add(lerDados["senha"].ToString());
+                    usuario.Add(lerDados["loja"].ToString());
                 }
                 return usuario;
             }
@@ -52,7 +53,7 @@ namespace DAO
             try
             {
                 conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_nome as Nome, c_senha as Senha from a_usuario", conexao);
+                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_filial as Filial, c_nome as Nome, c_senha as Senha from a_usuario order by c_codigo", conexao);
                 NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
                 dataAdapter.SelectCommand = sql;
 
@@ -125,10 +126,11 @@ namespace DAO
             {
                 //Uso @ como identificador de variaveis
                 conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("insert into a_usuario (c_nome, c_senha) values (@nome, @senha)", conexao);
+                NpgsqlCommand sql = new NpgsqlCommand("insert into a_usuario (c_nome, c_senha, c_filial) values (@nome, @senha, @filial)", conexao);
 
                 sql.Parameters.AddWithValue("@nome", usuario.Nome);
                 sql.Parameters.AddWithValue("@senha", usuario.Senha);
+                sql.Parameters.AddWithValue("@filial", usuario.Filial);
 
                 conexao.Open();
                 sql.ExecuteNonQuery();

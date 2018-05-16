@@ -82,41 +82,20 @@ namespace GUI
         //Este método preenche o campo de texto com a informação referente ao iten selecionado no comboBox
         private void cbx_LojaUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String conexao_Postgres = @"Server = localhost; Port = 5432; Database = sigcom; User Id = postgres; Password = raphael;";
-            NpgsqlConnection conexao = null;
 
             try
             {
-                conexao = new NpgsqlConnection(conexao_Postgres);
-
-                if (cbx_LojaUsuario.SelectedIndex >= 0)
+                if (cbx_LojaUsuario.SelectedIndex != -1)
                 {
-                    int valor = Convert.ToInt32(cbx_LojaUsuario.SelectedValue);
-                    txb_NomeLojaUsuario.Text = valor.ToString();//Convert.ToString(valor);
-
-                    if (conexao.State == 0)
-                        conexao.Open();
-
-                    NpgsqlCommand sql = new NpgsqlCommand("select c_sigla from a_empresa where c_codigo = @cod_empresa", conexao);
-                    sql.Parameters.Add("@cod_empresa", NpgsqlTypes.NpgsqlDbType.Integer).Value = Convert.ToInt32(txb_NomeLojaUsuario.Text);
-
-                    NpgsqlDataReader lerDados;
-                    lerDados = sql.ExecuteReader();
-
-                    if (lerDados.Read())
-                    {
-                        txb_NomeLojaUsuario.Text = lerDados["c_sigla"].ToString();
-                    }
+                    DataRowView drw = ((DataRowView)cbx_LojaUsuario.SelectedItem);
+                    txb_NomeLojaUsuario.Text = drw["c_sigla"].ToString();
                 }
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Erro ao exibir o nome da filial! " + erro);
             }
-            finally
-            {
-                conexao.Close();
-            }
+            
         }//Fim do método preenche textBom utilizando seleção de comboBox
 
         //Preenche comboBox com valores da tabela de Empresas
@@ -124,7 +103,7 @@ namespace GUI
         {
             String conexao_Postgres = @"Server = localhost; Port = 5432; Database = sigcom; User Id = postgres; Password = raphael;";
             NpgsqlConnection conexao = null;
-            
+
             try
             {
                 conexao = new NpgsqlConnection(conexao_Postgres);
@@ -141,11 +120,11 @@ namespace GUI
                 cbx_LojaUsuario.DataSource = dtUsuario;
                 cbx_LojaUsuario.ValueMember = "c_codigo";
                 cbx_LojaUsuario.DisplayMember = "c_codigo";
-                cbx_LojaUsuario.SelectedItem = "";
-                cbx_LojaUsuario.Refresh();               
+                cbx_LojaUsuario.SelectedItem = "";                
+                cbx_LojaUsuario.Refresh();
 
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 MessageBox.Show("Falha ao consultar dados empresa." + erro);
             }
@@ -184,6 +163,7 @@ namespace GUI
                     ModeloUsuario obj_Usuario = new ModeloUsuario();
                     obj_Usuario.Nome = txb_NomeUsuario.Text;
                     obj_Usuario.Senha = txb_SenhaUsuario.Text;
+                    obj_Usuario.Filial = Convert.ToInt32(cbx_LojaUsuario.SelectedItem.ToString());
 
                     BLL_Usuario usuario_bll = new BLL_Usuario();
                     usuario_bll.dao_grava_usuario(obj_Usuario);

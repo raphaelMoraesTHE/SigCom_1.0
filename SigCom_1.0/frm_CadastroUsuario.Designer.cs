@@ -738,6 +738,7 @@
             this.dgv_Usuario.Size = new System.Drawing.Size(1241, 466);
             this.dgv_Usuario.TabIndex = 0;
             this.dgv_Usuario.TabStop = false;
+            
             // 
             // frm_CadastroUsuario
             // 
