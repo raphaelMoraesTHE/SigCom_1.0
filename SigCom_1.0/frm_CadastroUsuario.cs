@@ -163,7 +163,7 @@ namespace GUI
                     ModeloUsuario obj_Usuario = new ModeloUsuario();
                     obj_Usuario.Nome = txb_NomeUsuario.Text;
                     obj_Usuario.Senha = txb_SenhaUsuario.Text;
-                    obj_Usuario.Filial = Convert.ToInt32(cbx_LojaUsuario.SelectedItem.ToString());
+                    obj_Usuario.Filial = Convert.ToInt32(cbx_LojaUsuario.Text);
 
                     BLL_Usuario usuario_bll = new BLL_Usuario();
                     usuario_bll.dao_grava_usuario(obj_Usuario);
@@ -195,5 +195,6 @@ namespace GUI
             frm_ConsultaRapida frmConsultaRapida = new frm_ConsultaRapida();
             frmConsultaRapida.ShowDialog();
         }
+                
     }
 }

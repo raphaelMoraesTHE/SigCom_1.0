@@ -20,32 +20,63 @@ namespace GUI
 
         string conexao = "Host=localhost;Username=postgres;Password=raphael;Database=sigcom";
 
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                NpgsqlConnection conectar = new NpgsqlConnection(conexao);
+                conectar.Open();
+                if (conectar.State == ConnectionState.Open)
+                    this.Show();
+                conectar.Close();
+            }
+            catch (Exception)
+            {
+                frm_ConectaBanco formConectaBanco = new frm_ConectaBanco();
+                formConectaBanco.ShowDialog();
+            }
+
+        }
+
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
-            bool retorno = false;            
-
             NpgsqlConnection conectar = new NpgsqlConnection(conexao);
-            conectar.Open();
-
-            NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM a_usuario WHERE c_nome = '" + txb_Usuario.Text + "' AND c_senha = '" + txb_Senha.Text + "'", conectar);
-            NpgsqlDataReader lerDados = comando.ExecuteReader();
-
-            if (lerDados.Read())
+            try
             {
-                retorno = true;
-                frm_Principal formPrincipal = new frm_Principal(txb_Usuario.Text);
-                formPrincipal.Show();
+                bool retorno = false;
+                
+                conectar.Open();
 
-                MessageBox.Show("Login realizado com sucesso!");
-                this.Hide();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM a_usuario WHERE c_nome = '" + txb_Usuario.Text + "' AND c_senha = '" + txb_Senha.Text + "'", conectar);
+                NpgsqlDataReader lerDados = comando.ExecuteReader();
+
+                if (lerDados.Read())
+                {
+                    retorno = true;
+                    frm_Principal formPrincipal = new frm_Principal(txb_Usuario.Text);
+                    formPrincipal.Show();
+
+                    MessageBox.Show("Login realizado com sucesso!");
+                    this.Hide();
+                }
+                if (retorno == false)
+                {
+                    MessageBox.Show("Usuário ou senha incorreto, tente novamente!");
+                }
+
+                lerDados.Close();                
             }
-            if (retorno == false)
+            catch (Exception erro)
             {
-                MessageBox.Show("Usuário ou senha incorreto, tente novamente!");
+                MessageBox.Show("Falha ao consultar dados empresa." + erro);
+                frm_ConectaBanco formConectaBanco = new frm_ConectaBanco();
+                formConectaBanco.ShowDialog();
             }
-
-            lerDados.Close();
-            conectar.Close();
+            finally
+            {
+                conectar.Close();
+            }
+            
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -55,5 +86,10 @@ namespace GUI
             else
                 this.Close();           
         }
+
+        //private void frm_Login_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    btn_Cancelar_Click(sender, e);
+        //}
     }
 }

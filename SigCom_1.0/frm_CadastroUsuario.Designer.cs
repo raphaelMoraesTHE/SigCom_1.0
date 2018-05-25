@@ -144,8 +144,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.label13);
             this.splitContainer1.Panel2.Controls.Add(this.label12);
             this.splitContainer1.Panel2.Controls.Add(this.dgv_Usuario);
-            this.splitContainer1.Size = new System.Drawing.Size(1248, 791);
-            this.splitContainer1.SplitterDistance = 260;
+            this.splitContainer1.Size = new System.Drawing.Size(1248, 750);
+            this.splitContainer1.SplitterDistance = 246;
             this.splitContainer1.TabIndex = 0;
             // 
             // buttonEdit1
@@ -156,7 +156,8 @@
             this.buttonEdit1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Colorful;
             this.buttonEdit1.Controls.Add(this.cbx_CaixaUsuario);
             this.buttonEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit1.Location = new System.Drawing.Point(563, 66);
+            this.buttonEdit1.Location = new System.Drawing.Point(563, 61);
+            this.buttonEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.buttonEdit1.Name = "buttonEdit1";
             this.buttonEdit1.ShowTextBox = false;
@@ -184,12 +185,13 @@
             // 
             // cbx_LojaUsuario
             // 
+            this.cbx_LojaUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_LojaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_LojaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cbx_LojaUsuario.FormattingEnabled = true;
             this.cbx_LojaUsuario.Items.AddRange(new object[] {
             "0"});
-            this.cbx_LojaUsuario.Location = new System.Drawing.Point(301, 67);
+            this.cbx_LojaUsuario.Location = new System.Drawing.Point(301, 61);
             this.cbx_LojaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_LojaUsuario.Name = "cbx_LojaUsuario";
             this.cbx_LojaUsuario.Size = new System.Drawing.Size(56, 28);
@@ -201,7 +203,7 @@
             this.tbx_NomeCaixaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbx_NomeCaixaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_NomeCaixaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.tbx_NomeCaixaUsuario.Location = new System.Drawing.Point(623, 67);
+            this.tbx_NomeCaixaUsuario.Location = new System.Drawing.Point(623, 61);
             this.tbx_NomeCaixaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_NomeCaixaUsuario.Name = "tbx_NomeCaixaUsuario";
             this.tbx_NomeCaixaUsuario.ReadOnly = true;
@@ -217,7 +219,8 @@
             this.cbx_PerfilAcessoUsuario.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Colorful;
             this.cbx_PerfilAcessoUsuario.Controls.Add(this.buttonEditChildButton1);
             this.cbx_PerfilAcessoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_PerfilAcessoUsuario.Location = new System.Drawing.Point(563, 120);
+            this.cbx_PerfilAcessoUsuario.Location = new System.Drawing.Point(563, 111);
+            this.cbx_PerfilAcessoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_PerfilAcessoUsuario.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.cbx_PerfilAcessoUsuario.Name = "cbx_PerfilAcessoUsuario";
             this.cbx_PerfilAcessoUsuario.ShowTextBox = false;
@@ -244,10 +247,12 @@
             // 
             // txb_ConfirmaSenhaUsuario
             // 
+            this.txb_ConfirmaSenhaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txb_ConfirmaSenhaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_ConfirmaSenhaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ConfirmaSenhaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_ConfirmaSenhaUsuario.Location = new System.Drawing.Point(371, 220);
+            this.txb_ConfirmaSenhaUsuario.Location = new System.Drawing.Point(369, 212);
             this.txb_ConfirmaSenhaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_ConfirmaSenhaUsuario.Name = "txb_ConfirmaSenhaUsuario";
             this.txb_ConfirmaSenhaUsuario.Size = new System.Drawing.Size(167, 27);
@@ -256,10 +261,12 @@
             // 
             // txb_SenhaUsuario
             // 
+            this.txb_SenhaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txb_SenhaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_SenhaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_SenhaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_SenhaUsuario.Location = new System.Drawing.Point(195, 220);
+            this.txb_SenhaUsuario.Location = new System.Drawing.Point(193, 212);
             this.txb_SenhaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_SenhaUsuario.Name = "txb_SenhaUsuario";
             this.txb_SenhaUsuario.Size = new System.Drawing.Size(167, 27);
@@ -268,10 +275,12 @@
             // 
             // txb_SenhaAtualUsuario
             // 
+            this.txb_SenhaAtualUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txb_SenhaAtualUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_SenhaAtualUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_SenhaAtualUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_SenhaAtualUsuario.Location = new System.Drawing.Point(21, 220);
+            this.txb_SenhaAtualUsuario.Location = new System.Drawing.Point(20, 212);
             this.txb_SenhaAtualUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_SenhaAtualUsuario.Name = "txb_SenhaAtualUsuario";
             this.txb_SenhaAtualUsuario.Size = new System.Drawing.Size(167, 27);
@@ -283,7 +292,7 @@
             this.txb_NomePerfilAcessoUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_NomePerfilAcessoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_NomePerfilAcessoUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_NomePerfilAcessoUsuario.Location = new System.Drawing.Point(623, 120);
+            this.txb_NomePerfilAcessoUsuario.Location = new System.Drawing.Point(623, 111);
             this.txb_NomePerfilAcessoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_NomePerfilAcessoUsuario.Name = "txb_NomePerfilAcessoUsuario";
             this.txb_NomePerfilAcessoUsuario.ReadOnly = true;
@@ -296,7 +305,7 @@
             this.txb_NomeLojaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_NomeLojaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_NomeLojaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_NomeLojaUsuario.Location = new System.Drawing.Point(364, 67);
+            this.txb_NomeLojaUsuario.Location = new System.Drawing.Point(364, 61);
             this.txb_NomeLojaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_NomeLojaUsuario.Name = "txb_NomeLojaUsuario";
             this.txb_NomeLojaUsuario.ReadOnly = true;
@@ -308,7 +317,7 @@
             // 
             this.txb_EmailUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_EmailUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_EmailUsuario.Location = new System.Drawing.Point(21, 170);
+            this.txb_EmailUsuario.Location = new System.Drawing.Point(21, 161);
             this.txb_EmailUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_EmailUsuario.Name = "txb_EmailUsuario";
             this.txb_EmailUsuario.Size = new System.Drawing.Size(533, 27);
@@ -319,7 +328,7 @@
             this.txb_NomeUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_NomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_NomeUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_NomeUsuario.Location = new System.Drawing.Point(21, 120);
+            this.txb_NomeUsuario.Location = new System.Drawing.Point(21, 111);
             this.txb_NomeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_NomeUsuario.Name = "txb_NomeUsuario";
             this.txb_NomeUsuario.Size = new System.Drawing.Size(533, 27);
@@ -330,7 +339,7 @@
             this.txb_DataCadastroUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_DataCadastroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_DataCadastroUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_DataCadastroUsuario.Location = new System.Drawing.Point(132, 67);
+            this.txb_DataCadastroUsuario.Location = new System.Drawing.Point(132, 61);
             this.txb_DataCadastroUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_DataCadastroUsuario.Name = "txb_DataCadastroUsuario";
             this.txb_DataCadastroUsuario.ReadOnly = true;
@@ -343,7 +352,7 @@
             this.txb_CodigoUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_CodigoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_CodigoUsuario.ForeColor = System.Drawing.Color.Red;
-            this.txb_CodigoUsuario.Location = new System.Drawing.Point(21, 67);
+            this.txb_CodigoUsuario.Location = new System.Drawing.Point(21, 61);
             this.txb_CodigoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_CodigoUsuario.Name = "txb_CodigoUsuario";
             this.txb_CodigoUsuario.ReadOnly = true;
@@ -353,8 +362,10 @@
             // 
             // btn_DefineAlteraSenhaUsuario
             // 
+            this.btn_DefineAlteraSenhaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_DefineAlteraSenhaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DefineAlteraSenhaUsuario.Location = new System.Drawing.Point(543, 218);
+            this.btn_DefineAlteraSenhaUsuario.Location = new System.Drawing.Point(555, 209);
             this.btn_DefineAlteraSenhaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DefineAlteraSenhaUsuario.Name = "btn_DefineAlteraSenhaUsuario";
             this.btn_DefineAlteraSenhaUsuario.Size = new System.Drawing.Size(199, 31);
@@ -365,9 +376,10 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(367, 199);
+            this.label11.Location = new System.Drawing.Point(367, 190);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(137, 25);
             this.label11.TabIndex = 38;
@@ -376,9 +388,10 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(191, 199);
+            this.label9.Location = new System.Drawing.Point(191, 190);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 25);
             this.label9.TabIndex = 36;
@@ -387,9 +400,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 199);
+            this.label6.Location = new System.Drawing.Point(19, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 25);
             this.label6.TabIndex = 34;
@@ -400,7 +414,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(556, 42);
+            this.label8.Location = new System.Drawing.Point(556, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 25);
             this.label8.TabIndex = 30;
@@ -411,7 +425,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(297, 42);
+            this.label7.Location = new System.Drawing.Point(297, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 25);
             this.label7.TabIndex = 27;
@@ -420,6 +434,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.groupBox1.Controls.Add(this.cbx_LojaAutorizadasUsuario);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btn_ExcluirUsuarioLoja);
@@ -427,7 +442,7 @@
             this.groupBox1.Controls.Add(this.btn_NovoUsuarioLoja);
             this.groupBox1.Controls.Add(this.dgv_LojasAutorizadasUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(840, 12);
+            this.groupBox1.Location = new System.Drawing.Point(852, 5);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -508,9 +523,11 @@
             // 
             // cbx_AtivoInativoUsuario
             // 
+            this.cbx_AtivoInativoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.cbx_AtivoInativoUsuario.AutoSize = true;
             this.cbx_AtivoInativoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_AtivoInativoUsuario.Location = new System.Drawing.Point(748, 226);
+            this.cbx_AtivoInativoUsuario.Location = new System.Drawing.Point(760, 214);
             this.cbx_AtivoInativoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_AtivoInativoUsuario.Name = "cbx_AtivoInativoUsuario";
             this.cbx_AtivoInativoUsuario.Size = new System.Drawing.Size(82, 26);
@@ -523,7 +540,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 149);
+            this.label4.Location = new System.Drawing.Point(17, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 25);
             this.label4.TabIndex = 17;
@@ -534,7 +551,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 99);
+            this.label3.Location = new System.Drawing.Point(19, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 25);
             this.label3.TabIndex = 15;
@@ -545,7 +562,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 42);
+            this.label2.Location = new System.Drawing.Point(128, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 25);
             this.label2.TabIndex = 13;
@@ -556,7 +573,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 42);
+            this.label1.Location = new System.Drawing.Point(19, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 25);
             this.label1.TabIndex = 11;
@@ -629,7 +646,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(557, 99);
+            this.label5.Location = new System.Drawing.Point(557, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 25);
             this.label5.TabIndex = 33;
@@ -638,10 +655,12 @@
             // 
             // txb_PesquisaUsuario
             // 
+            this.txb_PesquisaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_PesquisaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txb_PesquisaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_PesquisaUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txb_PesquisaUsuario.Location = new System.Drawing.Point(401, 478);
+            this.txb_PesquisaUsuario.Location = new System.Drawing.Point(401, 464);
             this.txb_PesquisaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_PesquisaUsuario.Name = "txb_PesquisaUsuario";
             this.txb_PesquisaUsuario.Size = new System.Drawing.Size(763, 27);
@@ -649,10 +668,12 @@
             // 
             // cbx_PesquisarUsuario
             // 
+            this.cbx_PesquisarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbx_PesquisarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_PesquisarUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cbx_PesquisarUsuario.FormattingEnabled = true;
-            this.cbx_PesquisarUsuario.Location = new System.Drawing.Point(157, 478);
+            this.cbx_PesquisarUsuario.Location = new System.Drawing.Point(157, 464);
             this.cbx_PesquisarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_PesquisarUsuario.Name = "cbx_PesquisarUsuario";
             this.cbx_PesquisarUsuario.Size = new System.Drawing.Size(116, 28);
@@ -660,8 +681,10 @@
             // 
             // btn_PesquisarUsuario
             // 
+            this.btn_PesquisarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_PesquisarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PesquisarUsuario.Location = new System.Drawing.Point(1171, 475);
+            this.btn_PesquisarUsuario.Location = new System.Drawing.Point(1171, 462);
             this.btn_PesquisarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_PesquisarUsuario.Name = "btn_PesquisarUsuario";
             this.btn_PesquisarUsuario.Size = new System.Drawing.Size(51, 31);
@@ -672,9 +695,11 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(279, 481);
+            this.label13.Location = new System.Drawing.Point(279, 468);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 25);
             this.label13.TabIndex = 40;
@@ -683,9 +708,11 @@
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(9, 481);
+            this.label12.Location = new System.Drawing.Point(9, 468);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(120, 25);
             this.label12.TabIndex = 39;
@@ -699,6 +726,9 @@
             this.dgv_Usuario.AllowUserToOrderColumns = true;
             this.dgv_Usuario.AllowUserToResizeColumns = false;
             this.dgv_Usuario.AllowUserToResizeRows = false;
+            this.dgv_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Usuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_Usuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -718,7 +748,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Usuario.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Usuario.Location = new System.Drawing.Point(4, 2);
+            this.dgv_Usuario.Location = new System.Drawing.Point(4, 4);
             this.dgv_Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Usuario.MultiSelect = false;
             this.dgv_Usuario.Name = "dgv_Usuario";
@@ -735,16 +765,15 @@
             this.dgv_Usuario.RowTemplate.Height = 24;
             this.dgv_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Usuario.ShowEditingIcon = false;
-            this.dgv_Usuario.Size = new System.Drawing.Size(1241, 466);
+            this.dgv_Usuario.Size = new System.Drawing.Size(1241, 453);
             this.dgv_Usuario.TabIndex = 0;
             this.dgv_Usuario.TabStop = false;
-            
             // 
             // frm_CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 791);
+            this.ClientSize = new System.Drawing.Size(1248, 750);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
