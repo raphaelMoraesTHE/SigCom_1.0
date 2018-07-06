@@ -163,7 +163,6 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseCompatibleTextRendering = true;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // buttonEdit1
             // 
@@ -259,7 +258,6 @@
             this.cbx_PerfildeAcesso.TabIndex = 1;
             this.cbx_PerfildeAcesso.UseCompatibleTextRendering = true;
             this.cbx_PerfildeAcesso.UseVisualStyleBackColor = false;
-            this.cbx_PerfildeAcesso.Click += new System.EventHandler(this.cbx_PerfildeAcesso_Click);
             // 
             // txb_ConfirmaSenhaUsuario
             // 
@@ -620,7 +618,6 @@
             this.btn_ExcluirUsuario.Text = "Excluir";
             this.btn_ExcluirUsuario.UseCompatibleTextRendering = true;
             this.btn_ExcluirUsuario.UseVisualStyleBackColor = true;
-            this.btn_ExcluirUsuario.Click += new System.EventHandler(this.btn_ExcluirUsuario_Click);
             // 
             // btn_AlterarUsuario
             // 
@@ -633,7 +630,6 @@
             this.btn_AlterarUsuario.Text = "Alterar";
             this.btn_AlterarUsuario.UseCompatibleTextRendering = true;
             this.btn_AlterarUsuario.UseVisualStyleBackColor = true;
-            this.btn_AlterarUsuario.Click += new System.EventHandler(this.btn_AlterarUsuario_Click);
             // 
             // btn_GravarUsuario
             // 
@@ -714,7 +710,6 @@
             this.btn_PesquisarUsuario.Text = "Ir";
             this.btn_PesquisarUsuario.UseCompatibleTextRendering = true;
             this.btn_PesquisarUsuario.UseVisualStyleBackColor = true;
-            this.btn_PesquisarUsuario.Click += new System.EventHandler(this.btn_PesquisarUsuario_Click);
             // 
             // label13
             // 
@@ -787,8 +782,6 @@
             this.dgv_Usuario.Size = new System.Drawing.Size(1241, 453);
             this.dgv_Usuario.TabIndex = 0;
             this.dgv_Usuario.TabStop = false;
-            this.dgv_Usuario.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Usuario_CellMouseClick);
-            this.dgv_Usuario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Usuario_RowEnter);
             // 
             // frm_CadastroUsuario
             // 
