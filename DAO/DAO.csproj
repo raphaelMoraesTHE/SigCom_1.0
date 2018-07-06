@@ -58,6 +58,10 @@
   <ItemGroup>
     <Compile Include="ConfiguraConexaoBanco.cs" />
     <Compile Include="DadosConexaoPostgres.cs" />
+    <Compile Include="DAOConfiguraConexaoPostgres.cs" />
+    <Compile Include="DAO_Caixa.cs" />
+    <Compile Include="DAO_Empresa.cs" />
+    <Compile Include="DAO_TabMunicipio.cs" />
     <Compile Include="DAO_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

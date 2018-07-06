@@ -35,8 +35,35 @@ namespace GUI
         {
             frm_CadastroUsuario formularioCadastroUsuario = new frm_CadastroUsuario();
             formularioCadastroUsuario.ShowDialog();
+            formularioCadastroUsuario.Dispose();
         }
 
-        
+        private void cadastroDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroCaixa formularioCadastroCaixa = new frm_CadastroCaixa();
+            formularioCadastroCaixa.ShowDialog();
+            formularioCadastroCaixa.Dispose();
+        }
+
+        private void saldosDeCaixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroSaldoCaixa formularioCadastroSaldoCaixa = new frm_CadastroSaldoCaixa();
+            formularioCadastroSaldoCaixa.ShowDialog();
+            formularioCadastroSaldoCaixa.Dispose();
+        }
+
+        private void lojasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroEmpresa formularioEmpresa = new frm_CadastroEmpresa();
+            formularioEmpresa.ShowDialog();
+            formularioEmpresa.Dispose();
+        }
+
+        private void cadastroDePerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroPerfilUsuario formularioPerfilUsuario = new frm_CadastroPerfilUsuario();
+            formularioPerfilUsuario.ShowDialog();
+            formularioPerfilUsuario.Dispose();
+        }
     }
 }

@@ -11,113 +11,14 @@ namespace DAO
 {
     public class DAO_Usuario
     {
-        String conexao_Postgres = @"Server = localhost; Port = 5432; Database = sigcom; User Id = postgres; Password = raphael;";
-        NpgsqlConnection conexao = null;
+        private DAOConfiguraConexaoPostgres conexao_Postgres;
 
-        public List<string> listaUsuario()
+        public bool existe;
+        public String mensagem = "";
+
+        public DAO_Usuario(DAOConfiguraConexaoPostgres conexao)
         {
-            try
-            {
-                conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_filial as Filial, c_nome as Nome, c_senha as Senha from a_usuario", conexao);
-
-                List<string> usuario = new List<string>();
-
-                conexao.Open();
-
-                NpgsqlDataReader lerDados;
-                lerDados = sql.ExecuteReader();
-
-                while (lerDados.Read())
-                {
-                    usuario.Add(lerDados["codigo"].ToString());
-                    usuario.Add(lerDados["nome"].ToString());
-                    usuario.Add(lerDados["senha"].ToString());
-                    usuario.Add(lerDados["loja"].ToString());
-                }
-                return usuario;
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-            finally
-            {
-                conexao.Close();
-            }
-
-        }//Fim lista usuario
-
-        public DataTable lista_Usuario()
-        {
-            try
-            {
-                conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select c_codigo as Código, c_filial as Filial, c_nome as Nome, c_senha as Senha from a_usuario order by c_codigo", conexao);
-                NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
-                dataAdapter.SelectCommand = sql;
-
-                DataTable dtUsuario = new DataTable();
-                dataAdapter.Fill(dtUsuario);
-
-                return dtUsuario;
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-            finally
-            {
-                conexao.Close();
-            }
-        }//Fim Lista Usuario
-
-        public DataTable pesquisa_Usuario_Nome(string pesquisa)
-        {
-            try
-            {
-                conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select * from a_usuario where c_nome like " + pesquisa + "%'", conexao);
-                NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
-                dataAdapter.SelectCommand = sql;
-
-                DataTable dtUsuario = new DataTable();
-                dataAdapter.Fill(dtUsuario);
-
-                return dtUsuario;
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-            finally
-            {
-                conexao.Close();
-            }
-        }//Fim Pesquisa usuario por nome
-
-        public DataTable pesquisa_Usuario_Codigo(string pesquisa)
-        {
-            try
-            {
-                conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("select * from a_usuario where c_codigo = " + pesquisa, conexao);
-                NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
-                dataAdapter.SelectCommand = sql;
-
-                DataTable dtUsuario = new DataTable();
-                dataAdapter.Fill(dtUsuario);
-
-                return dtUsuario;
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-            finally
-            {
-                conexao.Close();
-            }
+            this.conexao_Postgres = conexao;
         }
 
         public void grava_Usuario(ModeloUsuario usuario)
@@ -125,15 +26,20 @@ namespace DAO
             try
             {
                 //Uso @ como identificador de variaveis
-                conexao = new NpgsqlConnection(conexao_Postgres);
-                NpgsqlCommand sql = new NpgsqlCommand("insert into a_usuario (c_nome, c_senha, c_filial) values (@nome, @senha, @filial)", conexao);
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conexao_Postgres.ObjetoConexao;
+                cmd.CommandText = "INSERT INTO a_usuario (c_nome, c_senha, c_filial, c_dtcadastro, c_caixa, c_email)" + 
+                                  " VALUES (@nome, @senha, @filial, @dtcadastro, @caixa, @email) RETURNING c_codigo; ";//select @@IDENTITY; SELECT NEXTVAL(a_usuario_c_codigo_seq)
 
-                sql.Parameters.AddWithValue("@nome", usuario.Nome);
-                sql.Parameters.AddWithValue("@senha", usuario.Senha);
-                sql.Parameters.AddWithValue("@filial", usuario.Filial);
+                cmd.Parameters.AddWithValue("@nome", usuario.Nome);
+                cmd.Parameters.AddWithValue("@senha", usuario.Senha);
+                cmd.Parameters.AddWithValue("@filial", usuario.Filial);
+                cmd.Parameters.AddWithValue("@dtcadastro", usuario.DataCad);
+                cmd.Parameters.AddWithValue("@caixa", usuario.Caixa);
+                cmd.Parameters.AddWithValue("@email", usuario.Email);
 
-                conexao.Open();
-                sql.ExecuteNonQuery();
+                conexao_Postgres.Conectar();
+                usuario.Codigo = Convert.ToInt32(cmd.ExecuteScalar());
             }
             catch (Exception erro)
             {
@@ -141,7 +47,197 @@ namespace DAO
             }
             finally
             {
-                conexao.Close();
+                conexao_Postgres.Desconectar();
+            }
+        }
+
+        public void alterar_Usuario(ModeloUsuario usuario)
+        {
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conexao_Postgres.ObjetoConexao;
+                cmd.CommandText = "UPDATE a_usuario SET c_nome = @nome, c_senha = @senha, c_filial = @filial, c_caixa = @caixa, c_email = @email" + 
+                                  " WHERE c_codigo = @codigo;";
+
+                cmd.Parameters.AddWithValue("@nome", usuario.Nome);
+                cmd.Parameters.AddWithValue("@senha", usuario.Senha);
+                cmd.Parameters.AddWithValue("@filial", usuario.Filial);
+                cmd.Parameters.AddWithValue("@codigo", usuario.Codigo);
+                cmd.Parameters.AddWithValue("@caixa", usuario.Caixa);
+                cmd.Parameters.AddWithValue("@email", usuario.Email);
+
+                conexao_Postgres.Conectar();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                conexao_Postgres.Desconectar();
+            }
+        }
+
+        public void excluir_Usuario(int codigo)
+        {
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conexao_Postgres.ObjetoConexao;
+                cmd.CommandText = "DELETE FROM a_usuario WHERE c_codigo = @codigo;";
+
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+
+                conexao_Postgres.Conectar();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                conexao_Postgres.Desconectar();
+            }
+        }
+
+        public DataTable pesquisa_Usuario_Nome(String pesquisa)
+        {
+            try
+            {
+                DataTable tabela = new DataTable();
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT * FROM a_usuario WHERE c_nome LIKE '" + pesquisa + "%'", conexao_Postgres.StringDeConexaoPostgres);
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }//Fim Pesquisa usuario por nome
+
+        public DataTable pesquisa_Usuario_Codigo(int pesquisa)
+        {
+            try
+            {
+                DataTable tabela = new DataTable();
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter("select * from a_usuario where c_codigo = " + pesquisa, conexao_Postgres.StringDeConexaoPostgres);
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+        }
+
+        public DataTable lista_Usuario()
+        {
+            try
+            {
+                DataTable tabela = new DataTable();
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_dtcadastro, c_filial, c_caixa, c_nome, c_email, c_senha" + 
+                                                             " FROM a_usuario ORDER BY c_codigo", conexao_Postgres.StringDeConexaoPostgres);
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+        }//Fim Lista Usuario
+
+        public ModeloUsuario informaProximoCodigo()
+        {
+            ModeloUsuario modelo = new ModeloUsuario();
+            NpgsqlCommand cmd = new NpgsqlCommand();
+
+            cmd.Connection = conexao_Postgres.ObjetoConexao;
+            cmd.CommandText = "SELECT last_value + 1 as proximo from a_usuario_c_codigo_seq;";
+
+            conexao_Postgres.Conectar();
+            NpgsqlDataReader dt = cmd.ExecuteReader();
+            if (dt.HasRows)
+            {
+                dt.Read();
+                modelo.Codigo = Convert.ToInt32(dt["proximo"]);
+            }
+
+            conexao_Postgres.Desconectar();
+
+            return modelo;
+        }
+
+        public ModeloUsuario carregaModeloUsuario(int codigo)
+        {
+            ModeloUsuario modelo = new ModeloUsuario();
+            NpgsqlCommand cmd = new NpgsqlCommand();
+
+            cmd.Connection = conexao_Postgres.ObjetoConexao;
+            cmd.CommandText = "SELECT * FROM a_usuario WHERE c_codigo = @codigo;";
+
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+
+            conexao_Postgres.Conectar();
+            NpgsqlDataReader dt = cmd.ExecuteReader();
+            if (dt.HasRows)
+            {
+                dt.Read();
+                modelo.Codigo = Convert.ToInt32(dt["c_codigo"]);
+                modelo.Nome = Convert.ToString(dt["c_nome"]);
+                modelo.Senha = Convert.ToString(dt["c_senha"]);
+                modelo.Filial = Convert.ToInt32(dt["c_filial"]);
+                modelo.DataCad = Convert.ToDateTime(dt["c_dtcadastro"]);
+                modelo.Caixa = Convert.ToInt32(dt["c_caixa"]);
+                modelo.Email = Convert.ToString(dt["c_email"]);
+            }
+
+            conexao_Postgres.Desconectar();
+
+            return modelo;
+        }
+
+        public bool verifica_Usuario_Login(String login, String senha)
+        {
+            ModeloUsuario modelo = new ModeloUsuario();
+            NpgsqlCommand cmd = new NpgsqlCommand();
+
+            try
+            {
+                cmd.Connection = conexao_Postgres.ObjetoConexao;
+                cmd.CommandText = "SELECT * FROM a_usuario WHERE c_nome = @nome  AND c_senha = @senha;";
+
+                cmd.Parameters.AddWithValue("@nome", login);
+                cmd.Parameters.AddWithValue("@senha", senha);
+
+                conexao_Postgres.Conectar();
+                NpgsqlDataReader dt = cmd.ExecuteReader();
+
+                if (dt.HasRows)
+                {
+                    existe = true;
+                }
+
+                return existe;
+            }
+            catch (Exception erro)
+            {
+                mensagem = "Erro com banco de dados";
+                throw erro;
+            }
+            finally
+            {
+                conexao_Postgres.Desconectar();
             }
         }
     }

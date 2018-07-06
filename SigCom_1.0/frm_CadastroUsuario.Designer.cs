@@ -34,12 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.buttonEdit1 = new Syncfusion.Windows.Forms.Tools.ButtonEdit();
             this.cbx_CaixaUsuario = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
             this.cbx_LojaUsuario = new System.Windows.Forms.ComboBox();
             this.tbx_NomeCaixaUsuario = new System.Windows.Forms.TextBox();
             this.cbx_PerfilAcessoUsuario = new Syncfusion.Windows.Forms.Tools.ButtonEdit();
-            this.buttonEditChildButton1 = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
+            this.cbx_PerfildeAcesso = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
             this.txb_ConfirmaSenhaUsuario = new System.Windows.Forms.TextBox();
             this.txb_SenhaUsuario = new System.Windows.Forms.TextBox();
             this.txb_SenhaAtualUsuario = new System.Windows.Forms.TextBox();
@@ -104,6 +105,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Cancelar);
             this.splitContainer1.Panel1.Controls.Add(this.buttonEdit1);
             this.splitContainer1.Panel1.Controls.Add(this.cbx_LojaUsuario);
             this.splitContainer1.Panel1.Controls.Add(this.tbx_NomeCaixaUsuario);
@@ -148,6 +150,21 @@
             this.splitContainer1.SplitterDistance = 246;
             this.splitContainer1.TabIndex = 0;
             // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.Location = new System.Drawing.Point(528, 4);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(97, 31);
+            this.btn_Cancelar.TabIndex = 43;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseCompatibleTextRendering = true;
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
             // buttonEdit1
             // 
             this.buttonEdit1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -160,7 +177,6 @@
             this.buttonEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.ShowTextBox = false;
             this.buttonEdit1.Size = new System.Drawing.Size(59, 28);
             this.buttonEdit1.TabIndex = 42;
             this.buttonEdit1.UseVisualStyle = true;
@@ -215,9 +231,9 @@
             // 
             this.cbx_PerfilAcessoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbx_PerfilAcessoUsuario.BeforeTouchSize = new System.Drawing.Size(59, 28);
-            this.cbx_PerfilAcessoUsuario.Buttons.Add(this.buttonEditChildButton1);
+            this.cbx_PerfilAcessoUsuario.Buttons.Add(this.cbx_PerfildeAcesso);
             this.cbx_PerfilAcessoUsuario.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Colorful;
-            this.cbx_PerfilAcessoUsuario.Controls.Add(this.buttonEditChildButton1);
+            this.cbx_PerfilAcessoUsuario.Controls.Add(this.cbx_PerfildeAcesso);
             this.cbx_PerfilAcessoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_PerfilAcessoUsuario.Location = new System.Drawing.Point(563, 111);
             this.cbx_PerfilAcessoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -228,22 +244,22 @@
             this.cbx_PerfilAcessoUsuario.TabIndex = 40;
             this.cbx_PerfilAcessoUsuario.UseVisualStyle = true;
             // 
-            // buttonEditChildButton1
+            // cbx_PerfildeAcesso
             // 
-            this.buttonEditChildButton1.BackColor = System.Drawing.SystemColors.Window;
-            this.buttonEditChildButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonEditChildButton1.BeforeTouchSize = new System.Drawing.Size(20, 24);
-            this.buttonEditChildButton1.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
-            this.buttonEditChildButton1.ComboEditBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonEditChildButton1.Image = null;
-            this.buttonEditChildButton1.IsBackStageButton = false;
-            this.buttonEditChildButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEditChildButton1.Name = "buttonEditChildButton1";
-            this.buttonEditChildButton1.PreferredWidth = 20;
-            this.buttonEditChildButton1.TabIndex = 1;
-            this.buttonEditChildButton1.UseCompatibleTextRendering = true;
-            this.buttonEditChildButton1.UseVisualStyleBackColor = false;
-            this.buttonEditChildButton1.Click += new System.EventHandler(this.buttonEditChildButton1_Click);
+            this.cbx_PerfildeAcesso.BackColor = System.Drawing.SystemColors.Window;
+            this.cbx_PerfildeAcesso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cbx_PerfildeAcesso.BeforeTouchSize = new System.Drawing.Size(20, 24);
+            this.cbx_PerfildeAcesso.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
+            this.cbx_PerfildeAcesso.ComboEditBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbx_PerfildeAcesso.Image = null;
+            this.cbx_PerfildeAcesso.IsBackStageButton = false;
+            this.cbx_PerfildeAcesso.Margin = new System.Windows.Forms.Padding(0);
+            this.cbx_PerfildeAcesso.Name = "cbx_PerfildeAcesso";
+            this.cbx_PerfildeAcesso.PreferredWidth = 20;
+            this.cbx_PerfildeAcesso.TabIndex = 1;
+            this.cbx_PerfildeAcesso.UseCompatibleTextRendering = true;
+            this.cbx_PerfildeAcesso.UseVisualStyleBackColor = false;
+            this.cbx_PerfildeAcesso.Click += new System.EventHandler(this.cbx_PerfildeAcesso_Click);
             // 
             // txb_ConfirmaSenhaUsuario
             // 
@@ -359,6 +375,7 @@
             this.txb_CodigoUsuario.Size = new System.Drawing.Size(100, 27);
             this.txb_CodigoUsuario.TabIndex = 0;
             this.txb_CodigoUsuario.TabStop = false;
+            this.txb_CodigoUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_DefineAlteraSenhaUsuario
             // 
@@ -603,6 +620,7 @@
             this.btn_ExcluirUsuario.Text = "Excluir";
             this.btn_ExcluirUsuario.UseCompatibleTextRendering = true;
             this.btn_ExcluirUsuario.UseVisualStyleBackColor = true;
+            this.btn_ExcluirUsuario.Click += new System.EventHandler(this.btn_ExcluirUsuario_Click);
             // 
             // btn_AlterarUsuario
             // 
@@ -615,6 +633,7 @@
             this.btn_AlterarUsuario.Text = "Alterar";
             this.btn_AlterarUsuario.UseCompatibleTextRendering = true;
             this.btn_AlterarUsuario.UseVisualStyleBackColor = true;
+            this.btn_AlterarUsuario.Click += new System.EventHandler(this.btn_AlterarUsuario_Click);
             // 
             // btn_GravarUsuario
             // 
@@ -673,6 +692,9 @@
             this.cbx_PesquisarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_PesquisarUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cbx_PesquisarUsuario.FormattingEnabled = true;
+            this.cbx_PesquisarUsuario.Items.AddRange(new object[] {
+            "Nome",
+            "Código"});
             this.cbx_PesquisarUsuario.Location = new System.Drawing.Point(157, 464);
             this.cbx_PesquisarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_PesquisarUsuario.Name = "cbx_PesquisarUsuario";
@@ -692,6 +714,7 @@
             this.btn_PesquisarUsuario.Text = "Ir";
             this.btn_PesquisarUsuario.UseCompatibleTextRendering = true;
             this.btn_PesquisarUsuario.UseVisualStyleBackColor = true;
+            this.btn_PesquisarUsuario.Click += new System.EventHandler(this.btn_PesquisarUsuario_Click);
             // 
             // label13
             // 
@@ -729,17 +752,15 @@
             this.dgv_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Usuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgv_Usuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Usuario.ColumnHeadersHeight = 28;
+            this.dgv_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -750,7 +771,6 @@
             this.dgv_Usuario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Usuario.Location = new System.Drawing.Point(4, 4);
             this.dgv_Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_Usuario.MultiSelect = false;
             this.dgv_Usuario.Name = "dgv_Usuario";
             this.dgv_Usuario.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -761,14 +781,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Usuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Usuario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv_Usuario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv_Usuario.RowTemplate.Height = 24;
             this.dgv_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Usuario.ShowEditingIcon = false;
             this.dgv_Usuario.Size = new System.Drawing.Size(1241, 453);
             this.dgv_Usuario.TabIndex = 0;
             this.dgv_Usuario.TabStop = false;
-            
+            this.dgv_Usuario.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Usuario_CellMouseClick);
+            this.dgv_Usuario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Usuario_RowEnter);
             // 
             // frm_CadastroUsuario
             // 
@@ -849,9 +869,10 @@
         private System.Windows.Forms.ComboBox cbx_PesquisarUsuario;
         private System.Windows.Forms.Label label12;
         private Syncfusion.Windows.Forms.Tools.ButtonEdit cbx_PerfilAcessoUsuario;
-        private Syncfusion.Windows.Forms.Tools.ButtonEditChildButton buttonEditChildButton1;
+        private Syncfusion.Windows.Forms.Tools.ButtonEditChildButton cbx_PerfildeAcesso;
         private Syncfusion.Windows.Forms.Tools.ButtonEdit buttonEdit1;
         private Syncfusion.Windows.Forms.Tools.ButtonEditChildButton cbx_CaixaUsuario;
         private System.Windows.Forms.TextBox tbx_NomeCaixaUsuario;
+        private System.Windows.Forms.Button btn_Cancelar;
     }
 }

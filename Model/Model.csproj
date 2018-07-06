@@ -56,6 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModeloCaixa.cs" />
+    <Compile Include="ModeloEmpresa.cs" />
+    <Compile Include="ModeloTabMunicipio.cs" />
+    <Compile Include="ModeloTabUF.cs" />
     <Compile Include="ModeloUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
