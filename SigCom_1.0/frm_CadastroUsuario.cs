@@ -363,6 +363,7 @@ namespace GUI
                     cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
                     bll = new BLL_Usuario(cx);
                     ModeloUsuario modelo = bll.carregaModeloUsuario(codigo);
+
                     txb_CodigoUsuario.Text = modelo.Codigo.ToString();
                     txb_NomeUsuario.Text = modelo.Nome;
                     txb_SenhaUsuario.Text = modelo.Senha;

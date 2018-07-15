@@ -495,6 +495,7 @@ namespace GUI
             if (cbx_PesquisarEmpresa.SelectedIndex == 2)
             {
                 txb_PesquisaEmpresa.Visible = false;
+                txb_PesquisaEmpresa.Clear();
                 mtb_PesquisaEmpresa.Visible = true;
                 mtb_PesquisaEmpresa.Mask = "99,999,999/9999-99";
                 mtb_PesquisaEmpresa.TabIndex = 2;

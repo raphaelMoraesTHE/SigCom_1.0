@@ -149,7 +149,7 @@
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(103, 31);
-            this.btn_Cancelar.TabIndex = 45;
+            this.btn_Cancelar.TabIndex = 21;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseCompatibleTextRendering = true;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             this.btn_ImprimirCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ImprimirCaixa.Name = "btn_ImprimirCaixa";
             this.btn_ImprimirCaixa.Size = new System.Drawing.Size(97, 31);
-            this.btn_ImprimirCaixa.TabIndex = 10;
+            this.btn_ImprimirCaixa.TabIndex = 20;
             this.btn_ImprimirCaixa.Text = "Imprimir";
             this.btn_ImprimirCaixa.UseCompatibleTextRendering = true;
             this.btn_ImprimirCaixa.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             this.btn_ExcluirCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ExcluirCaixa.Name = "btn_ExcluirCaixa";
             this.btn_ExcluirCaixa.Size = new System.Drawing.Size(97, 31);
-            this.btn_ExcluirCaixa.TabIndex = 9;
+            this.btn_ExcluirCaixa.TabIndex = 19;
             this.btn_ExcluirCaixa.Text = "Excluir";
             this.btn_ExcluirCaixa.UseCompatibleTextRendering = true;
             this.btn_ExcluirCaixa.UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@
             this.btn_AlterarCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AlterarCaixa.Name = "btn_AlterarCaixa";
             this.btn_AlterarCaixa.Size = new System.Drawing.Size(97, 31);
-            this.btn_AlterarCaixa.TabIndex = 8;
+            this.btn_AlterarCaixa.TabIndex = 18;
             this.btn_AlterarCaixa.Text = "Alterar";
             this.btn_AlterarCaixa.UseCompatibleTextRendering = true;
             this.btn_AlterarCaixa.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.btn_GravarCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_GravarCaixa.Name = "btn_GravarCaixa";
             this.btn_GravarCaixa.Size = new System.Drawing.Size(97, 31);
-            this.btn_GravarCaixa.TabIndex = 7;
+            this.btn_GravarCaixa.TabIndex = 17;
             this.btn_GravarCaixa.Text = "Gravar";
             this.btn_GravarCaixa.UseCompatibleTextRendering = true;
             this.btn_GravarCaixa.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.btn_NovoCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_NovoCaixa.Name = "btn_NovoCaixa";
             this.btn_NovoCaixa.Size = new System.Drawing.Size(97, 31);
-            this.btn_NovoCaixa.TabIndex = 6;
+            this.btn_NovoCaixa.TabIndex = 4;
             this.btn_NovoCaixa.Text = "Novo";
             this.btn_NovoCaixa.UseCompatibleTextRendering = true;
             this.btn_NovoCaixa.UseVisualStyleBackColor = true;
@@ -239,7 +239,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1248, 702);
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -280,7 +280,9 @@
             this.dgv_CadastroCaixas.RowTemplate.Height = 24;
             this.dgv_CadastroCaixas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_CadastroCaixas.Size = new System.Drawing.Size(1227, 585);
-            this.dgv_CadastroCaixas.TabIndex = 47;
+            this.dgv_CadastroCaixas.StandardTab = true;
+            this.dgv_CadastroCaixas.TabIndex = 0;
+            this.dgv_CadastroCaixas.TabStop = false;
             this.dgv_CadastroCaixas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CadastroCaixas_CellDoubleClick);
             this.dgv_CadastroCaixas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CadastroCaixas_RowEnter);
             // 
@@ -322,7 +324,7 @@
             this.txb_PesquisaCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_PesquisaCaixa.Name = "txb_PesquisaCaixa";
             this.txb_PesquisaCaixa.Size = new System.Drawing.Size(976, 27);
-            this.txb_PesquisaCaixa.TabIndex = 41;
+            this.txb_PesquisaCaixa.TabIndex = 2;
             // 
             // label13
             // 
@@ -347,22 +349,22 @@
             this.cbx_PesquisarCaixa.Items.AddRange(new object[] {
             "Nome",
             "Código"});
-            this.cbx_PesquisarCaixa.Location = new System.Drawing.Point(3, 30);
+            this.cbx_PesquisarCaixa.Location = new System.Drawing.Point(3, 29);
             this.cbx_PesquisarCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_PesquisarCaixa.Name = "cbx_PesquisarCaixa";
             this.cbx_PesquisarCaixa.Size = new System.Drawing.Size(163, 28);
-            this.cbx_PesquisarCaixa.TabIndex = 42;
+            this.cbx_PesquisarCaixa.TabIndex = 1;
             // 
             // btn_PesquisarCaixa
             // 
             this.btn_PesquisarCaixa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_PesquisarCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PesquisarCaixa.Location = new System.Drawing.Point(1165, 26);
+            this.btn_PesquisarCaixa.Location = new System.Drawing.Point(1165, 28);
             this.btn_PesquisarCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_PesquisarCaixa.Name = "btn_PesquisarCaixa";
             this.btn_PesquisarCaixa.Size = new System.Drawing.Size(57, 31);
-            this.btn_PesquisarCaixa.TabIndex = 43;
+            this.btn_PesquisarCaixa.TabIndex = 3;
             this.btn_PesquisarCaixa.Text = "Ir";
             this.btn_PesquisarCaixa.UseCompatibleTextRendering = true;
             this.btn_PesquisarCaixa.UseVisualStyleBackColor = true;
@@ -391,7 +393,7 @@
             this.groupBox2.Location = new System.Drawing.Point(7, 271);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1221, 383);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usuários Autorizados";
             // 
@@ -405,7 +407,7 @@
             this.dgv_CaixaUsuAutorizado.ReadOnly = true;
             this.dgv_CaixaUsuAutorizado.RowTemplate.Height = 24;
             this.dgv_CaixaUsuAutorizado.Size = new System.Drawing.Size(1208, 310);
-            this.dgv_CaixaUsuAutorizado.TabIndex = 1;
+            this.dgv_CaixaUsuAutorizado.TabIndex = 0;
             // 
             // panel4
             // 
@@ -430,7 +432,7 @@
             this.txb_CaixaUsuAutorizado.Name = "txb_CaixaUsuAutorizado";
             this.txb_CaixaUsuAutorizado.ReadOnly = true;
             this.txb_CaixaUsuAutorizado.Size = new System.Drawing.Size(693, 27);
-            this.txb_CaixaUsuAutorizado.TabIndex = 55;
+            this.txb_CaixaUsuAutorizado.TabIndex = 0;
             // 
             // bte_CaixaUsuAutorizado
             // 
@@ -448,7 +450,7 @@
             this.bte_CaixaUsuAutorizado.Name = "bte_CaixaUsuAutorizado";
             this.bte_CaixaUsuAutorizado.ShowTextBox = false;
             this.bte_CaixaUsuAutorizado.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaUsuAutorizado.TabIndex = 54;
+            this.bte_CaixaUsuAutorizado.TabIndex = 0;
             this.bte_CaixaUsuAutorizado.UseVisualStyle = true;
             // 
             // btn_CaixaUsuAutorizado
@@ -464,7 +466,8 @@
             this.btn_CaixaUsuAutorizado.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaUsuAutorizado.Name = "btn_CaixaUsuAutorizado";
             this.btn_CaixaUsuAutorizado.PreferredWidth = 25;
-            this.btn_CaixaUsuAutorizado.TabIndex = 1;
+            this.btn_CaixaUsuAutorizado.TabIndex = 23;
+            this.btn_CaixaUsuAutorizado.Text = "...";
             this.btn_CaixaUsuAutorizado.UseCompatibleTextRendering = true;
             this.btn_CaixaUsuAutorizado.UseVisualStyleBackColor = false;
             // 
@@ -490,7 +493,7 @@
             this.btn_ExcluirCaixaUsuAutorizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ExcluirCaixaUsuAutorizado.Name = "btn_ExcluirCaixaUsuAutorizado";
             this.btn_ExcluirCaixaUsuAutorizado.Size = new System.Drawing.Size(97, 31);
-            this.btn_ExcluirCaixaUsuAutorizado.TabIndex = 12;
+            this.btn_ExcluirCaixaUsuAutorizado.TabIndex = 25;
             this.btn_ExcluirCaixaUsuAutorizado.Text = "Excluir";
             this.btn_ExcluirCaixaUsuAutorizado.UseCompatibleTextRendering = true;
             this.btn_ExcluirCaixaUsuAutorizado.UseVisualStyleBackColor = true;
@@ -504,7 +507,7 @@
             this.btn_GravaCaixaUsuAutorizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_GravaCaixaUsuAutorizado.Name = "btn_GravaCaixaUsuAutorizado";
             this.btn_GravaCaixaUsuAutorizado.Size = new System.Drawing.Size(97, 31);
-            this.btn_GravaCaixaUsuAutorizado.TabIndex = 11;
+            this.btn_GravaCaixaUsuAutorizado.TabIndex = 24;
             this.btn_GravaCaixaUsuAutorizado.Text = "Gravar";
             this.btn_GravaCaixaUsuAutorizado.UseCompatibleTextRendering = true;
             this.btn_GravaCaixaUsuAutorizado.UseVisualStyleBackColor = true;
@@ -518,7 +521,7 @@
             this.btn_NovoCaixaUsuAutorizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_NovoCaixaUsuAutorizado.Name = "btn_NovoCaixaUsuAutorizado";
             this.btn_NovoCaixaUsuAutorizado.Size = new System.Drawing.Size(97, 31);
-            this.btn_NovoCaixaUsuAutorizado.TabIndex = 10;
+            this.btn_NovoCaixaUsuAutorizado.TabIndex = 22;
             this.btn_NovoCaixaUsuAutorizado.Text = "Novo";
             this.btn_NovoCaixaUsuAutorizado.UseCompatibleTextRendering = true;
             this.btn_NovoCaixaUsuAutorizado.UseVisualStyleBackColor = true;
@@ -586,7 +589,7 @@
             this.bte_CaixaContaRecCelular.Name = "bte_CaixaContaRecCelular";
             this.bte_CaixaContaRecCelular.ShowTextBox = false;
             this.bte_CaixaContaRecCelular.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaRecCelular.TabIndex = 60;
+            this.bte_CaixaContaRecCelular.TabIndex = 0;
             this.bte_CaixaContaRecCelular.UseVisualStyle = true;
             // 
             // btn_CaixaContaRecCelular
@@ -602,7 +605,8 @@
             this.btn_CaixaContaRecCelular.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaRecCelular.Name = "btn_CaixaContaRecCelular";
             this.btn_CaixaContaRecCelular.PreferredWidth = 25;
-            this.btn_CaixaContaRecCelular.TabIndex = 1;
+            this.btn_CaixaContaRecCelular.TabIndex = 16;
+            this.btn_CaixaContaRecCelular.Text = "...";
             this.btn_CaixaContaRecCelular.UseCompatibleTextRendering = true;
             this.btn_CaixaContaRecCelular.UseVisualStyleBackColor = false;
             this.btn_CaixaContaRecCelular.Click += new System.EventHandler(this.btn_CaixaContaRecCelular_Click);
@@ -636,7 +640,7 @@
             this.bte_CaixaContaServico.Name = "bte_CaixaContaServico";
             this.bte_CaixaContaServico.ShowTextBox = false;
             this.bte_CaixaContaServico.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaServico.TabIndex = 58;
+            this.bte_CaixaContaServico.TabIndex = 0;
             this.bte_CaixaContaServico.UseVisualStyle = true;
             // 
             // btn_CaixaContaServico
@@ -652,7 +656,8 @@
             this.btn_CaixaContaServico.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaServico.Name = "btn_CaixaContaServico";
             this.btn_CaixaContaServico.PreferredWidth = 25;
-            this.btn_CaixaContaServico.TabIndex = 1;
+            this.btn_CaixaContaServico.TabIndex = 15;
+            this.btn_CaixaContaServico.Text = "...";
             this.btn_CaixaContaServico.UseCompatibleTextRendering = true;
             this.btn_CaixaContaServico.UseVisualStyleBackColor = false;
             this.btn_CaixaContaServico.Click += new System.EventHandler(this.btn_CaixaContaServico_Click);
@@ -686,7 +691,7 @@
             this.bte_CaixaContaRecJuro.Name = "bte_CaixaContaRecJuro";
             this.bte_CaixaContaRecJuro.ShowTextBox = false;
             this.bte_CaixaContaRecJuro.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaRecJuro.TabIndex = 56;
+            this.bte_CaixaContaRecJuro.TabIndex = 0;
             this.bte_CaixaContaRecJuro.UseVisualStyle = true;
             // 
             // btn_CaixaContaRecJuro
@@ -702,7 +707,8 @@
             this.btn_CaixaContaRecJuro.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaRecJuro.Name = "btn_CaixaContaRecJuro";
             this.btn_CaixaContaRecJuro.PreferredWidth = 25;
-            this.btn_CaixaContaRecJuro.TabIndex = 1;
+            this.btn_CaixaContaRecJuro.TabIndex = 12;
+            this.btn_CaixaContaRecJuro.Text = "...";
             this.btn_CaixaContaRecJuro.UseCompatibleTextRendering = true;
             this.btn_CaixaContaRecJuro.UseVisualStyleBackColor = false;
             this.btn_CaixaContaRecJuro.Click += new System.EventHandler(this.btn_CaixaContaRecJuro_Click);
@@ -736,7 +742,7 @@
             this.bte_CaixaContaSangria.Name = "bte_CaixaContaSangria";
             this.bte_CaixaContaSangria.ShowTextBox = false;
             this.bte_CaixaContaSangria.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaSangria.TabIndex = 54;
+            this.bte_CaixaContaSangria.TabIndex = 0;
             this.bte_CaixaContaSangria.UseVisualStyle = true;
             // 
             // btn_CaixaContaSangria
@@ -752,7 +758,8 @@
             this.btn_CaixaContaSangria.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaSangria.Name = "btn_CaixaContaSangria";
             this.btn_CaixaContaSangria.PreferredWidth = 25;
-            this.btn_CaixaContaSangria.TabIndex = 1;
+            this.btn_CaixaContaSangria.TabIndex = 14;
+            this.btn_CaixaContaSangria.Text = "...";
             this.btn_CaixaContaSangria.UseCompatibleTextRendering = true;
             this.btn_CaixaContaSangria.UseVisualStyleBackColor = false;
             this.btn_CaixaContaSangria.Click += new System.EventHandler(this.btn_CaixaContaSangria_Click);
@@ -786,7 +793,7 @@
             this.bte_CaixaContaPagJuros.Name = "bte_CaixaContaPagJuros";
             this.bte_CaixaContaPagJuros.ShowTextBox = false;
             this.bte_CaixaContaPagJuros.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaPagJuros.TabIndex = 52;
+            this.bte_CaixaContaPagJuros.TabIndex = 0;
             this.bte_CaixaContaPagJuros.UseVisualStyle = true;
             // 
             // btn_CaixaContaPagJuro
@@ -802,7 +809,8 @@
             this.btn_CaixaContaPagJuro.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaPagJuro.Name = "btn_CaixaContaPagJuro";
             this.btn_CaixaContaPagJuro.PreferredWidth = 25;
-            this.btn_CaixaContaPagJuro.TabIndex = 1;
+            this.btn_CaixaContaPagJuro.TabIndex = 10;
+            this.btn_CaixaContaPagJuro.Text = "...";
             this.btn_CaixaContaPagJuro.UseCompatibleTextRendering = true;
             this.btn_CaixaContaPagJuro.UseVisualStyleBackColor = false;
             this.btn_CaixaContaPagJuro.Click += new System.EventHandler(this.btn_CaixaContaPagJuro_Click);
@@ -836,7 +844,7 @@
             this.bte_CaixaContaRecebimento.Name = "bte_CaixaContaRecebimento";
             this.bte_CaixaContaRecebimento.ShowTextBox = false;
             this.bte_CaixaContaRecebimento.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaRecebimento.TabIndex = 50;
+            this.bte_CaixaContaRecebimento.TabIndex = 0;
             this.bte_CaixaContaRecebimento.UseVisualStyle = true;
             // 
             // btn_CaixaContaRecebimento
@@ -852,7 +860,8 @@
             this.btn_CaixaContaRecebimento.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaRecebimento.Name = "btn_CaixaContaRecebimento";
             this.btn_CaixaContaRecebimento.PreferredWidth = 25;
-            this.btn_CaixaContaRecebimento.TabIndex = 1;
+            this.btn_CaixaContaRecebimento.TabIndex = 11;
+            this.btn_CaixaContaRecebimento.Text = "...";
             this.btn_CaixaContaRecebimento.UseCompatibleTextRendering = true;
             this.btn_CaixaContaRecebimento.UseVisualStyleBackColor = false;
             this.btn_CaixaContaRecebimento.Click += new System.EventHandler(this.btn_CaixaContaRecebimento_Click);
@@ -886,7 +895,7 @@
             this.bte_CaixaContaSuprimento.Name = "bte_CaixaContaSuprimento";
             this.bte_CaixaContaSuprimento.ShowTextBox = false;
             this.bte_CaixaContaSuprimento.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaSuprimento.TabIndex = 48;
+            this.bte_CaixaContaSuprimento.TabIndex = 0;
             this.bte_CaixaContaSuprimento.UseVisualStyle = true;
             // 
             // btn_CaixaContaSuprimento
@@ -902,7 +911,8 @@
             this.btn_CaixaContaSuprimento.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaSuprimento.Name = "btn_CaixaContaSuprimento";
             this.btn_CaixaContaSuprimento.PreferredWidth = 25;
-            this.btn_CaixaContaSuprimento.TabIndex = 1;
+            this.btn_CaixaContaSuprimento.TabIndex = 13;
+            this.btn_CaixaContaSuprimento.Text = "...";
             this.btn_CaixaContaSuprimento.UseCompatibleTextRendering = true;
             this.btn_CaixaContaSuprimento.UseVisualStyleBackColor = false;
             this.btn_CaixaContaSuprimento.Click += new System.EventHandler(this.btn_CaixaContaSuprimento_Click);
@@ -936,7 +946,7 @@
             this.bte_CaixaContaPagamentos.Name = "bte_CaixaContaPagamentos";
             this.bte_CaixaContaPagamentos.ShowTextBox = false;
             this.bte_CaixaContaPagamentos.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaPagamentos.TabIndex = 46;
+            this.bte_CaixaContaPagamentos.TabIndex = 0;
             this.bte_CaixaContaPagamentos.UseVisualStyle = true;
             // 
             // btn_CaixaContaPagamento
@@ -952,7 +962,8 @@
             this.btn_CaixaContaPagamento.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaPagamento.Name = "btn_CaixaContaPagamento";
             this.btn_CaixaContaPagamento.PreferredWidth = 25;
-            this.btn_CaixaContaPagamento.TabIndex = 1;
+            this.btn_CaixaContaPagamento.TabIndex = 9;
+            this.btn_CaixaContaPagamento.Text = "...";
             this.btn_CaixaContaPagamento.UseCompatibleTextRendering = true;
             this.btn_CaixaContaPagamento.UseVisualStyleBackColor = false;
             this.btn_CaixaContaPagamento.Click += new System.EventHandler(this.btn_CaixaContaPagamento_Click);
@@ -986,7 +997,7 @@
             this.bte_CaixaContaVenda.Name = "bte_CaixaContaVenda";
             this.bte_CaixaContaVenda.ShowTextBox = false;
             this.bte_CaixaContaVenda.Size = new System.Drawing.Size(95, 28);
-            this.bte_CaixaContaVenda.TabIndex = 44;
+            this.bte_CaixaContaVenda.TabIndex = 0;
             this.bte_CaixaContaVenda.UseVisualStyle = true;
             // 
             // btn_CaixaContaVenda
@@ -1002,7 +1013,8 @@
             this.btn_CaixaContaVenda.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CaixaContaVenda.Name = "btn_CaixaContaVenda";
             this.btn_CaixaContaVenda.PreferredWidth = 25;
-            this.btn_CaixaContaVenda.TabIndex = 1;
+            this.btn_CaixaContaVenda.TabIndex = 8;
+            this.btn_CaixaContaVenda.Text = "...";
             this.btn_CaixaContaVenda.UseCompatibleTextRendering = true;
             this.btn_CaixaContaVenda.UseVisualStyleBackColor = false;
             this.btn_CaixaContaVenda.Click += new System.EventHandler(this.btn_CaixaContaVenda_Click);
@@ -1031,7 +1043,7 @@
             this.chb_TransportaSaldoCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chb_TransportaSaldoCaixa.Name = "chb_TransportaSaldoCaixa";
             this.chb_TransportaSaldoCaixa.Size = new System.Drawing.Size(175, 24);
-            this.chb_TransportaSaldoCaixa.TabIndex = 21;
+            this.chb_TransportaSaldoCaixa.TabIndex = 6;
             this.chb_TransportaSaldoCaixa.Text = "Trasporta Saldos";
             this.chb_TransportaSaldoCaixa.UseVisualStyleBackColor = true;
             // 
@@ -1044,7 +1056,7 @@
             this.txb_DescricaoCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_DescricaoCaixa.Name = "txb_DescricaoCaixa";
             this.txb_DescricaoCaixa.Size = new System.Drawing.Size(820, 27);
-            this.txb_DescricaoCaixa.TabIndex = 17;
+            this.txb_DescricaoCaixa.TabIndex = 5;
             // 
             // txb_CodigoCaixa
             // 
@@ -1071,7 +1083,7 @@
             this.chb_AtivoInativoCaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chb_AtivoInativoCaixa.Name = "chb_AtivoInativoCaixa";
             this.chb_AtivoInativoCaixa.Size = new System.Drawing.Size(86, 24);
-            this.chb_AtivoInativoCaixa.TabIndex = 19;
+            this.chb_AtivoInativoCaixa.TabIndex = 7;
             this.chb_AtivoInativoCaixa.Text = "Inativo";
             this.chb_AtivoInativoCaixa.UseVisualStyleBackColor = true;
             // 

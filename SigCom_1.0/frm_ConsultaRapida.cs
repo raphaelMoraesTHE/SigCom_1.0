@@ -88,6 +88,48 @@ namespace GUI
                     MessageBox.Show("Erro ao listar municipios " + erro);
                 }
             }
+
+            if (valor == "empresa")
+            {
+                this.Text = "Consulta Rápida - Filiais";
+
+                try
+                {
+                    DAOConfiguraConexaoPostgres cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                    BLL_Empresa tabMunicipio_bll = new BLL_Empresa(cx);
+
+                    dgv_PesquisaRapida.DataSource = tabMunicipio_bll.lista_Empresa();
+
+                    //Definição de layout das colunas e cabeçalho do dataGrid.
+                    dgv_PesquisaRapida.RowHeadersWidth = 24;
+                    dgv_PesquisaRapida.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    dgv_PesquisaRapida.Columns[0].HeaderText = "Código";
+                    dgv_PesquisaRapida.Columns[0].Width = 60;
+                    dgv_PesquisaRapida.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    dgv_PesquisaRapida.Columns[1].HeaderText = "Nome";
+                    dgv_PesquisaRapida.Columns[1].Width = 500;
+                    dgv_PesquisaRapida.Columns[2].HeaderText = "Fantasia";
+                    dgv_PesquisaRapida.Columns[2].Width = 260;
+                    dgv_PesquisaRapida.Columns[3].HeaderText = "Sigla";
+                    dgv_PesquisaRapida.Columns[3].Width = 60;
+                    dgv_PesquisaRapida.Columns[4].HeaderText = "Endereço";
+                    dgv_PesquisaRapida.Columns[4].Width = 260;
+                    dgv_PesquisaRapida.Columns[5].HeaderText = "Bairro";
+                    dgv_PesquisaRapida.Columns[5].Width = 150;
+                    dgv_PesquisaRapida.Columns[6].HeaderText = "CNPJ";
+                    dgv_PesquisaRapida.Columns[6].Width = 150;
+                    dgv_PesquisaRapida.Columns[7].HeaderText = "Insc.Est.";
+                    dgv_PesquisaRapida.Columns[7].Width = 100;
+                    dgv_PesquisaRapida.Columns[8].HeaderText = "Reg.Trib.";
+                    dgv_PesquisaRapida.Columns[8].Width = 70;
+                    dgv_PesquisaRapida.Columns[9].HeaderText = "Nat.Rec.";
+                    dgv_PesquisaRapida.Columns[9].Width = 70;
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao listar empresas " + erro);
+                }
+            }
         }
 
         private void frm_ConsultaRapida_Load(object sender, EventArgs e)
@@ -119,11 +161,18 @@ namespace GUI
                 cbx_PesquisaRapida.Items.Add("Código");
             }
 
-            //else
-            //{
-            //    cbx_PesquisaRapida.Items.Add("Nome");
-            //    cbx_PesquisaRapida.Items.Add("Código");
-            //}
+            if (this.Text == "Consulta Rápida - Filiais")
+            {
+                cbx_PesquisaRapida.Items.Add("Nome");
+                cbx_PesquisaRapida.Items.Add("CNPJ");
+                cbx_PesquisaRapida.Items.Add("Código");
+            }
+
+            else
+            {
+                cbx_PesquisaRapida.Items.Add("Nome");
+                cbx_PesquisaRapida.Items.Add("Código");
+            }
 
             cbx_PesquisaRapida.SelectedIndex = 0;
         }
@@ -158,6 +207,7 @@ namespace GUI
                     }
                 }
             }
+
             if (this.Text == "Consulta Rápida - Perfil de Acesso")
             {
                 MessageBox.Show("Estamos implementando esta funcionalidade", "Atenção!", MessageBoxButtons.OK);
@@ -186,6 +236,39 @@ namespace GUI
                         try
                         {
                             //dgv_PesquisaRapida.DataSource = bll.pesquisa_Municipio_Nome(Convert.ToInt32(txb_PesquisaRapida.Text));
+                        }
+                        catch (Exception erro)
+                        {
+
+                            MessageBox.Show("Pesquisa só recebe numeros!" + erro);
+                        }
+                    }
+                }
+            }
+
+            if (this.Text == "Consulta Rápida - Filiais")
+            {
+                DAOConfiguraConexaoPostgres cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                BLL_Empresa bll = new BLL_Empresa(cx);
+                if (cbx_PesquisaRapida.SelectedIndex == 0)//Pesquisa por Nome
+                {
+                    dgv_PesquisaRapida.DataSource = bll.pesquisa_Empresa_Nome(txb_PesquisaRapida.Text);
+                }
+                if (cbx_PesquisaRapida.SelectedIndex == 1)//Pesquisa por CNPJ
+                {
+                    dgv_PesquisaRapida.DataSource = bll.pesquisa_Empresa_Cnpj(txb_PesquisaRapida.Text);
+                }
+                if (cbx_PesquisaRapida.SelectedIndex == 2)//Pesquisa por Código
+                {
+                    if (txb_PesquisaRapida.Text.Length <= 0)
+                    {
+                        dgv_PesquisaRapida.DataSource = bll.pesquisa_Empresa_Nome(txb_PesquisaRapida.Text);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            dgv_PesquisaRapida.DataSource = bll.pesquisa_Empresa_Codigo(Convert.ToInt32(txb_PesquisaRapida.Text));
                         }
                         catch (Exception erro)
                         {

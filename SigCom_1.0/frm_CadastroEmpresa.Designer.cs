@@ -470,6 +470,7 @@
             this.btn_CodIBGEEmpresa.Name = "btn_CodIBGEEmpresa";
             this.btn_CodIBGEEmpresa.PreferredWidth = 25;
             this.btn_CodIBGEEmpresa.TabIndex = 21;
+            this.btn_CodIBGEEmpresa.Text = "...";
             this.btn_CodIBGEEmpresa.UseCompatibleTextRendering = true;
             this.btn_CodIBGEEmpresa.UseVisualStyleBackColor = false;
             this.btn_CodIBGEEmpresa.Click += new System.EventHandler(this.btn_CodIBGEEmpresa_Click);

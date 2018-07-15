@@ -56,6 +56,12 @@
     <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="FastReport, Version=2018.1.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.Bars, Version=2018.1.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.Data.Postgres, Version=2018.3.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastReport.Data.Postgres.2018.3.0\lib\net40\FastReport.Data.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2018.1.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
@@ -112,6 +118,12 @@
     <Compile Include="frm_CadastroEmpresa.Designer.cs">
       <DependentUpon>frm_CadastroEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_CadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroFuncionario.Designer.cs">
+      <DependentUpon>frm_CadastroFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CadastroPerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     <Compile Include="frm_ConectaBanco.Designer.cs">
       <DependentUpon>frm_ConectaBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Relatorio.Designer.cs">
+      <DependentUpon>frm_Relatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_CadastroCaixa.resx">
@@ -161,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroEmpresa.resx">
       <DependentUpon>frm_CadastroEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroFuncionario.resx">
+      <DependentUpon>frm_CadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroPerfilUsuario.resx">
       <DependentUpon>frm_CadastroPerfilUsuario.cs</DependentUpon>
@@ -182,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ConectaBanco.resx">
       <DependentUpon>frm_ConectaBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Relatorio.resx">
+      <DependentUpon>frm_Relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

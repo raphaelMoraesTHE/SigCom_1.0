@@ -49,6 +49,7 @@ namespace DAO
                 cmd.Connection = conexao_Postgres.ObjetoConexao;
                 cmd.CommandText = "UPDATE a_caixa SET c_descricao = @descricao WHERE c_codigo = @codigo;";
 
+                cmd.Parameters.AddWithValue("@codigo", caixa.Codigo);
                 cmd.Parameters.AddWithValue("@descricao", caixa.Descricao);
 
                 conexao_Postgres.Conectar();
