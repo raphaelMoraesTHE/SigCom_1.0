@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL_Caixa.cs" />
+    <Compile Include="BLL_CargosFuncoes.cs" />
     <Compile Include="BLL_Empresa.cs" />
     <Compile Include="BLL_Funcionario.cs" />
     <Compile Include="BLL_TabMunicipio.cs" />

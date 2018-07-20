@@ -49,18 +49,21 @@ namespace GUI
                     MessageBox.Show("Erro ao listar caixa " + erro);
                 }
             }
+
             if (valor == "perfil")
             {
                 this.Text = "Consulta Rápida - Perfil de Acesso";
 
                 MessageBox.Show("Estamos implementando esta funcionalidade", "Atenção!", MessageBoxButtons.OK);
             }
+
             if (valor == "contafin")
             {
                 this.Text = "Consulta Rápida - Conta Financeira";
 
                 MessageBox.Show("Estamos implementando esta funcionalidade", "Atenção!", MessageBoxButtons.OK);
             }
+
             if (valor == "municipio")
             {
                 this.Text = "Consulta Rápida - Municipios";
@@ -130,6 +133,44 @@ namespace GUI
                     MessageBox.Show("Erro ao listar empresas " + erro);
                 }
             }
+
+            if (valor == "cargosFuncoes")
+            {
+                this.Text = "Consulta Rápida - Cargos e Funções";
+
+                try
+                {
+                    DAOConfiguraConexaoPostgres cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                    BLL_CargosFuncoes bll = new BLL_CargosFuncoes(cx);
+
+                    dgv_PesquisaRapida.DataSource = bll.lista_CargosFuncoes();
+
+                    //Definição de layout das colunas e cabeçalho do dataGrid.
+                    dgv_PesquisaRapida.RowHeadersWidth = 24;
+                    dgv_PesquisaRapida.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    dgv_PesquisaRapida.Columns[0].HeaderText = "Código";
+                    dgv_PesquisaRapida.Columns[0].Width = 60;
+                    dgv_PesquisaRapida.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    dgv_PesquisaRapida.Columns[1].HeaderText = "Descrição";
+                    dgv_PesquisaRapida.Columns[1].Width = 600;
+                    dgv_PesquisaRapida.Columns[2].HeaderText = "Vendedor";
+                    dgv_PesquisaRapida.Columns[2].Width = 75;
+                    dgv_PesquisaRapida.Columns[3].HeaderText = "Tecnico";
+                    dgv_PesquisaRapida.Columns[3].Width = 75;
+                    dgv_PesquisaRapida.Columns[4].HeaderText = "Motorista";
+                    dgv_PesquisaRapida.Columns[4].Width = 75;
+                    dgv_PesquisaRapida.Columns[5].HeaderText = "Supervisor";
+                    dgv_PesquisaRapida.Columns[5].Width = 75;
+                    dgv_PesquisaRapida.Columns[6].HeaderText = "Cobrador";
+                    dgv_PesquisaRapida.Columns[6].Width = 75;
+                    dgv_PesquisaRapida.Columns[7].HeaderText = "Outros";
+                    dgv_PesquisaRapida.Columns[7].Width = 75;
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao listar cargos e funções " + erro);
+                }
+            }
         }
 
         private void frm_ConsultaRapida_Load(object sender, EventArgs e)
@@ -165,6 +206,12 @@ namespace GUI
             {
                 cbx_PesquisaRapida.Items.Add("Nome");
                 cbx_PesquisaRapida.Items.Add("CNPJ");
+                cbx_PesquisaRapida.Items.Add("Código");
+            }
+
+            if (this.Text == "Consulta Rápida - Cargos e Funções")
+            {
+                cbx_PesquisaRapida.Items.Add("Descrição");
                 cbx_PesquisaRapida.Items.Add("Código");
             }
 
@@ -269,6 +316,35 @@ namespace GUI
                         try
                         {
                             dgv_PesquisaRapida.DataSource = bll.pesquisa_Empresa_Codigo(Convert.ToInt32(txb_PesquisaRapida.Text));
+                        }
+                        catch (Exception erro)
+                        {
+
+                            MessageBox.Show("Pesquisa só recebe numeros!" + erro);
+                        }
+                    }
+                }
+            }
+
+            if (this.Text == "Consulta Rápida - Cargos e Funções")
+            {
+                DAOConfiguraConexaoPostgres cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                BLL_CargosFuncoes bll = new BLL_CargosFuncoes(cx);
+                if (cbx_PesquisaRapida.SelectedIndex == 0)
+                {
+                    dgv_PesquisaRapida.DataSource = bll.pesquisa_CargosFuncoes_Nome(txb_PesquisaRapida.Text);
+                }
+                if (cbx_PesquisaRapida.SelectedIndex == 1)
+                {
+                    if (txb_PesquisaRapida.Text.Length <= 0)
+                    {
+                        dgv_PesquisaRapida.DataSource = bll.pesquisa_CargosFuncoes_Nome(txb_PesquisaRapida.Text);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            dgv_PesquisaRapida.DataSource = bll.pesquisa_CargosFuncoes_Codigo(Convert.ToInt32(txb_PesquisaRapida.Text));
                         }
                         catch (Exception erro)
                         {

@@ -148,7 +148,7 @@ namespace GUI
             txb_VencimentoCNHFuncionario.ReadOnly = false;
             bte_CodIBGEFuncionario.Enabled = true;            
             bte_FilialFuncionario.Enabled = true;
-            //bte_FuncaoFuncionario.Enabled = true;
+            bte_FuncaoFuncionario.Enabled = true;
             btn_CodIBGEFuncionario.Enabled = true;
             btn_FilialFuncionario.Enabled = true;
             btn_FuncaoFuncionario.Enabled = true;
@@ -289,6 +289,7 @@ namespace GUI
                 obj_Funcionario.ComissaoAvista = Convert.ToDouble(txb_ComissaoAvFuncionario.Text);
                 obj_Funcionario.ComissaoAprazo = Convert.ToDouble(txb_ComissaoApFuncionario.Text);
                 obj_Funcionario.ComissaoRenegociacao = Convert.ToDouble(txb_ComissaoRenFuncionario.Text);
+                obj_Funcionario.CargoFuncao = Convert.ToInt32(bte_FuncaoFuncionario.Text);
                 // obj_Funcionario.DataCnhValidade = Convert.ToDateTime(txb_VencimentoCNHFuncionario.Text);
                 if (txb_VencimentoCNHFuncionario.Text == "  /  /")
                 {
@@ -452,6 +453,7 @@ namespace GUI
                     txb_ComissaoAvFuncionario.Text = obj_Funcionario.ComissaoAvista.ToString();
                     txb_ComissaoApFuncionario.Text = obj_Funcionario.ComissaoAprazo.ToString();
                     txb_ComissaoRenFuncionario.Text = obj_Funcionario.ComissaoRenegociacao.ToString();
+                    bte_FuncaoFuncionario.Text = obj_Funcionario.CargoFuncao.ToString();
                     //txb_VencimentoCNHFuncionario.Text = obj_Funcionario.DataCnhValidade.ToShortDateString();
                     if (obj_Funcionario.DataCnhValidade.ToShortDateString() == "01/01/0001")
                     {
@@ -501,6 +503,18 @@ namespace GUI
                     ModeloEmpresa modelo_empresa = bll_empresa.carregaModeloEmpresa(Convert.ToInt32(bte_FilialFuncionario.Text));
                     bte_FilialFuncionario.TextBox.Text = modelo_empresa.Codigo.ToString();
                     txb_SiglaFilialFuncionario.Text = modelo_empresa.Sigla;
+
+                    //Aqui preenche o textbox cargo funcionario e os checkbox conforme o valor definido no campo referente ao codigo do cargo
+                    BLL_CargosFuncoes bll_CargosFuncoes = new BLL_CargosFuncoes(cx);
+                    ModeloCargosFuncoes modelo_CargosFuncoes = bll_CargosFuncoes.carregaModeloCargosFuncoes(Convert.ToInt32(bte_FuncaoFuncionario.Text));
+                    bte_FuncaoFuncionario.TextBox.Text = modelo_CargosFuncoes.Codigo.ToString();
+                    txb_DescricaoFuncaoFuncionario.Text = modelo_CargosFuncoes.Descricao;
+                    chb_FuncaoCobrador.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Cobrador);
+                    chb_FuncaoMotorista.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Motorista);
+                    chb_FuncaoOutros.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Outros);
+                    chb_FuncaoSupervisor.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Supervisor);
+                    chb_FuncaoTecnico.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Tecnico);
+                    chb_FuncaoVendedor.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Vendedor);
 
                     this.altera_Botoes(3);
                 }
@@ -547,6 +561,7 @@ namespace GUI
                     txb_ComissaoAvFuncionario.Text = obj_Funcionario.ComissaoAvista.ToString();
                     txb_ComissaoApFuncionario.Text = obj_Funcionario.ComissaoAprazo.ToString();
                     txb_ComissaoRenFuncionario.Text = obj_Funcionario.ComissaoRenegociacao.ToString();
+                    bte_FuncaoFuncionario.Text = obj_Funcionario.CargoFuncao.ToString();
                     //txb_VencimentoCNHFuncionario.Text = obj_Funcionario.DataCnhValidade.ToShortDateString();
                     if (obj_Funcionario.DataCnhValidade.ToShortDateString() == "01/01/0001")
                     {
@@ -596,6 +611,18 @@ namespace GUI
                     ModeloEmpresa modelo_empresa = bll_empresa.carregaModeloEmpresa(Convert.ToInt32(bte_FilialFuncionario.Text));
                     bte_FilialFuncionario.TextBox.Text = modelo_empresa.Codigo.ToString();
                     txb_SiglaFilialFuncionario.Text = modelo_empresa.Sigla;
+
+                    //Aqui preenche o textbox cargo funcionario e os checkbox conforme o valor definido no campo referente ao codigo do cargo
+                    BLL_CargosFuncoes bll_CargosFuncoes = new BLL_CargosFuncoes(cx);
+                    ModeloCargosFuncoes modelo_CargosFuncoes = bll_CargosFuncoes.carregaModeloCargosFuncoes(Convert.ToInt32(bte_FuncaoFuncionario.Text));
+                    bte_FuncaoFuncionario.TextBox.Text = modelo_CargosFuncoes.Codigo.ToString();
+                    txb_DescricaoFuncaoFuncionario.Text = modelo_CargosFuncoes.Descricao;
+                    chb_FuncaoCobrador.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Cobrador);
+                    chb_FuncaoMotorista.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Motorista);
+                    chb_FuncaoOutros.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Outros);
+                    chb_FuncaoSupervisor.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Supervisor);
+                    chb_FuncaoTecnico.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Tecnico);
+                    chb_FuncaoVendedor.Checked = Convert.ToBoolean(modelo_CargosFuncoes.Vendedor);
                 }
                 else
                 {
@@ -657,9 +684,33 @@ namespace GUI
             frmConsultaRapida.Dispose();
         }
 
+        private void btn_FuncaoFuncionario_Click(object sender, EventArgs e)
+        {
+            frm_ConsultaRapida frmConsultaRapida = new frm_ConsultaRapida("cargosFuncoes");
+            frmConsultaRapida.ShowDialog();
+
+            if (frmConsultaRapida.codigo != 0)
+            {
+                cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                BLL_CargosFuncoes bll = new BLL_CargosFuncoes(cx);
+                ModeloCargosFuncoes modelo = bll.carregaModeloCargosFuncoes(frmConsultaRapida.codigo);
+                bte_FuncaoFuncionario.TextBox.Text = modelo.Codigo.ToString();
+                txb_DescricaoFuncaoFuncionario.Text = modelo.Descricao;
+                chb_FuncaoCobrador.Checked = Convert.ToBoolean(modelo.Cobrador);
+                chb_FuncaoMotorista.Checked = Convert.ToBoolean(modelo.Motorista);
+                chb_FuncaoOutros.Checked = Convert.ToBoolean(modelo.Outros);
+                chb_FuncaoSupervisor.Checked = Convert.ToBoolean(modelo.Supervisor);
+                chb_FuncaoTecnico.Checked = Convert.ToBoolean(modelo.Tecnico);
+                chb_FuncaoVendedor.Checked = Convert.ToBoolean(modelo.Vendedor);
+            }
+            frmConsultaRapida.Dispose();
+        }
+
         private void btn_ImprimirFuncionario_Click(object sender, EventArgs e)
         {
-            report1.Show();
+            //report1.Show();
+            //printDialog1.ShowDialog();
         }
+        
     }
 }

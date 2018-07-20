@@ -28,11 +28,11 @@ namespace DAO
                                  " a_funcionario " +
                                  "(c_dtcadastro, c_filial, c_nome, c_apelido, c_endereco, c_endnumero, c_complemento, c_bairro, c_cep, c_telefone, c_celular, c_fax," +
                                   " c_codmunicipio, c_cpf, c_identidade, c_cnh, c_cnhcategoria, c_cnhvalidade, c_nascimento, c_ctps, c_dtadmissao, c_dtafastamento," + 
-                                  " c_inativo, c_observacao, c_comisav, c_comisap, c_comisren)" +
+                                  " c_inativo, c_observacao, c_comisav, c_comisap, c_comisren, c_codcargofunc)" +
                                   " VALUES " +
                                   "(@dtcadastro, @filial, @nome, @apelido, @endereco, @endnumero, @complemento, @bairro, @cep, @telefone, @celular, @fax," +
                                   " @codmunicipio, @cpf, @identidade, @cnh, @cnhcategoria, @cnhvalidade, @nascimento, @ctps, @dtadmissao, @dtafastamento," +
-                                  " @inativo, @observacao, @comisav, @comisap, @comisren)" +
+                                  " @inativo, @observacao, @comisav, @comisap, @comisren, @codcargofunc)" +
                                   "RETURNING c_codigo;";
 
                 cmd.Parameters.AddWithValue("@dtcadastro", funcionario.DataCadastro);
@@ -58,6 +58,7 @@ namespace DAO
                 cmd.Parameters.AddWithValue("@comisap", funcionario.ComissaoAprazo);
                 cmd.Parameters.AddWithValue("@comisren", funcionario.ComissaoRenegociacao);
                 cmd.Parameters.AddWithValue("@ctps", funcionario.Ctps);
+                cmd.Parameters.AddWithValue("@codcargofunc", funcionario.CargoFuncao);
                 //cmd.Parameters.AddWithValue("@cnhvalidade", funcionario.DataCnhValidade);
                 if (funcionario.DataCnhValidade == null)
                 {
@@ -125,7 +126,7 @@ namespace DAO
                                   "c_bairro = @bairro, c_cep = @cep, c_telefone = @telefone, c_celular = @celular, c_fax = @fax, c_codmunicipio = @codmunicipio, c_cpf = @cpf, " + 
                                   "c_identidade = @identidade, c_cnh = @cnh, c_cnhcategoria = @cnhcategoria, c_cnhvalidade = @cnhvalidade, c_nascimento = @nascimento, c_ctps = @ctps, " + 
                                   "c_dtadmissao = @dtadmissao, c_dtafastamento = @dtafastamento, c_inativo = @inativo, c_observacao = @observacao, c_comisav = @comisav, " + 
-                                  "c_comisap = @comisap, c_comisren = @comisren " +
+                                  "c_comisap = @comisap, c_comisren = @comisren, c_codcargofunc = @codcargofunc " +
                                   "WHERE " +
                                   "c_codigo = @codigo;";
 
@@ -153,6 +154,7 @@ namespace DAO
                 cmd.Parameters.AddWithValue("@comisap", funcionario.ComissaoAprazo);
                 cmd.Parameters.AddWithValue("@comisren", funcionario.ComissaoRenegociacao);
                 cmd.Parameters.AddWithValue("@ctps", funcionario.Ctps);
+                cmd.Parameters.AddWithValue("@codcargofunc", funcionario.CargoFuncao);
                 //cmd.Parameters.AddWithValue("@cnhvalidade", funcionario.DataCnhValidade);
                 if (funcionario.DataCnhValidade == null)
                 {
@@ -361,6 +363,7 @@ namespace DAO
                 modelo.ComissaoAvista = Convert.ToDouble(dt["c_comisav"]);
                 modelo.ComissaoAprazo = Convert.ToDouble(dt["c_comisap"]);
                 modelo.ComissaoRenegociacao = Convert.ToDouble(dt["c_comisren"]);
+                modelo.CargoFuncao = Convert.ToInt32(dt["c_codcargofunc"]);
             }
 
             conexao_Postgres.Desconectar();

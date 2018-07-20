@@ -45,6 +45,7 @@
             this.caixasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saldosDeCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +87,7 @@
             this.clientesToolStripMenuItem,
             this.produtosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.toolStripSeparator1,
             this.funcionáriosToolStripMenuItem,
             this.lojasToolStripMenuItem,
@@ -140,6 +142,7 @@
             this.cadastroDeFunçõesToolStripMenuItem.Name = "cadastroDeFunçõesToolStripMenuItem";
             this.cadastroDeFunçõesToolStripMenuItem.Size = new System.Drawing.Size(303, 28);
             this.cadastroDeFunçõesToolStripMenuItem.Text = "Cadastro de Funções";
+            this.cadastroDeFunçõesToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFunçõesToolStripMenuItem_Click);
             // 
             // cadastroDeUsuáriosToolStripMenuItem
             // 
@@ -186,6 +189,12 @@
             this.saldosDeCaixaToolStripMenuItem.Text = "Cadastro de Saldos de Caixa";
             this.saldosDeCaixaToolStripMenuItem.Click += new System.EventHandler(this.saldosDeCaixaToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(216, 28);
+            this.toolStripMenuItem1.Text = "Transportadoras";
+            // 
             // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,5 +236,6 @@
         private System.Windows.Forms.ToolStripMenuItem caixasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saldosDeCaixaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

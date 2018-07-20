@@ -8,7 +8,7 @@ namespace Model
 {
     public class ModeloFuncionario
     {
-        private int codigo, filial, codmunicipio;
+        private int codigo, filial, codmunicipio, cargofuncao;
         private double comissaoAvista, comissaoAprazo, comissaoRenegociacao;
         private string nome, apelido, endereco, endNumero, complemento, bairro, cep, telefone, celular, fax, cpf, identidade, cnh, cnhCategoria, ctps, observacao;
         private DateTime dataNascimento, dataCadastro, dataCnhValidade, dataAdmissao, dataAfastamento;
@@ -17,6 +17,7 @@ namespace Model
         public int Codigo { get => codigo; set => codigo = value; }
         public int Filial { get => filial; set => filial = value; }
         public int CodMunicipio { get => codmunicipio; set => codmunicipio = value; }
+        public int CargoFuncao { get => cargofuncao; set => cargofuncao = value; }
         public double ComissaoAvista { get => comissaoAvista; set => comissaoAvista = value; }
         public double ComissaoAprazo { get => comissaoAprazo; set => comissaoAprazo = value; }
         public double ComissaoRenegociacao { get => comissaoRenegociacao; set => comissaoRenegociacao = value; }

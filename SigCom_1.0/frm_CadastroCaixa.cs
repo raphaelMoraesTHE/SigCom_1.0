@@ -133,7 +133,7 @@ namespace GUI
             btn_PesquisarCaixa.Enabled    = false;
             btn_ExcluirCaixa.Enabled      = false;
             btn_GravarCaixa.Enabled       = false;
-            btn_ImprimirCaixa.Enabled     = false;
+            //btn_ImprimirCaixa.Enabled     = false;
             btn_Cancelar.Enabled          = false;
 
             if (op == 1)

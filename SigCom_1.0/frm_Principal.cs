@@ -72,5 +72,12 @@ namespace GUI
             formularioFuncionario.ShowDialog();
             formularioFuncionario.Dispose();
         }
+
+        private void cadastroDeFunçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroCargosFuncoes formularioCargosFuncoes = new frm_CadastroCargosFuncoes();
+            formularioCargosFuncoes.ShowDialog();
+            formularioCargosFuncoes.Dispose();
+        }
     }
 }

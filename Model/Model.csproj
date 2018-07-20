@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModeloCaixa.cs" />
+    <Compile Include="ModeloCargosFuncoes.cs" />
     <Compile Include="ModeloEmpresa.cs" />
     <Compile Include="ModeloFuncionario.cs" />
     <Compile Include="ModeloTabMunicipio.cs" />

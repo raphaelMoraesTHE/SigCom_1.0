@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroFuncionario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Cancelar = new System.Windows.Forms.Button();
@@ -124,7 +124,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txb_ObservacoesFuncionario = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.report1 = new FastReport.Report();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -140,7 +139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bte_FuncaoFuncionario)).BeginInit();
             this.bte_FuncaoFuncionario.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.report1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -281,14 +279,14 @@
             this.dgv_CadastroFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_CadastroFuncionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_CadastroFuncionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_CadastroFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_CadastroFuncionario.Location = new System.Drawing.Point(7, 80);
             this.dgv_CadastroFuncionario.Name = "dgv_CadastroFuncionario";
@@ -1255,6 +1253,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_FuncaoOutros.AutoSize = true;
+            this.chb_FuncaoOutros.Enabled = false;
             this.chb_FuncaoOutros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_FuncaoOutros.Location = new System.Drawing.Point(493, 176);
             this.chb_FuncaoOutros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1270,6 +1269,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_FuncaoCobrador.AutoSize = true;
+            this.chb_FuncaoCobrador.Enabled = false;
             this.chb_FuncaoCobrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_FuncaoCobrador.Location = new System.Drawing.Point(493, 133);
             this.chb_FuncaoCobrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1285,6 +1285,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_FuncaoSupervisor.AutoSize = true;
+            this.chb_FuncaoSupervisor.Enabled = false;
             this.chb_FuncaoSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_FuncaoSupervisor.Location = new System.Drawing.Point(493, 90);
             this.chb_FuncaoSupervisor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1300,6 +1301,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_FuncaoMotorista.AutoSize = true;
+            this.chb_FuncaoMotorista.Enabled = false;
             this.chb_FuncaoMotorista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_FuncaoMotorista.Location = new System.Drawing.Point(145, 176);
             this.chb_FuncaoMotorista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1315,6 +1317,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_FuncaoTecnico.AutoSize = true;
+            this.chb_FuncaoTecnico.Enabled = false;
             this.chb_FuncaoTecnico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_FuncaoTecnico.Location = new System.Drawing.Point(145, 133);
             this.chb_FuncaoTecnico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1330,6 +1333,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_FuncaoVendedor.AutoSize = true;
+            this.chb_FuncaoVendedor.Enabled = false;
             this.chb_FuncaoVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_FuncaoVendedor.Location = new System.Drawing.Point(145, 90);
             this.chb_FuncaoVendedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1373,6 +1377,7 @@
             this.btn_FuncaoFuncionario.Text = "...";
             this.btn_FuncaoFuncionario.UseCompatibleTextRendering = true;
             this.btn_FuncaoFuncionario.UseVisualStyleBackColor = false;
+            this.btn_FuncaoFuncionario.Click += new System.EventHandler(this.btn_FuncaoFuncionario_Click);
             // 
             // txb_DescricaoFuncaoFuncionario
             // 
@@ -1450,11 +1455,6 @@
             this.label33.Text = "# # # Informações Adicionais Sobre o Funcionário # # #";
             this.label33.UseCompatibleTextRendering = true;
             // 
-            // report1
-            // 
-            this.report1.NeedRefresh = false;
-            this.report1.ReportResourceString = resources.GetString("report1.ReportResourceString");
-            // 
             // frm_CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1492,7 +1492,6 @@
             this.bte_FuncaoFuncionario.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.report1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1592,6 +1591,5 @@
         private System.Windows.Forms.MaskedTextBox txb_NascimentoFuncionario;
         private System.Windows.Forms.MaskedTextBox txb_VencimentoCNHFuncionario;
         private System.Windows.Forms.MaskedTextBox mtb_PesquisaFuncionario;
-        private FastReport.Report report1;
     }
 }
