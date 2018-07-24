@@ -219,19 +219,19 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -271,6 +271,30 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Opala.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clientes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produtos.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vendas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracoes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

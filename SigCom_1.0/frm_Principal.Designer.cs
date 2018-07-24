@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Principal));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsl_UsuarioLogado = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -35,19 +36,39 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeFunçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDePerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operaçõesComerciaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cFOPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centroDeCustoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lojasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planosDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caixasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saldosDeCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bancosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -90,8 +111,14 @@
             this.toolStripMenuItem1,
             this.toolStripSeparator1,
             this.funcionáriosToolStripMenuItem,
+            this.operaçõesComerciaisToolStripMenuItem,
+            this.cFOPToolStripMenuItem,
+            this.centroDeCustoToolStripMenuItem,
             this.lojasToolStripMenuItem,
-            this.caixasToolStripMenuItem});
+            this.planosDePagamentoToolStripMenuItem,
+            this.caixasToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.bancosToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(97, 27);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -99,25 +126,31 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.produtosToolStripMenuItem.Text = "Produtos";
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(255, 28);
+            this.toolStripMenuItem1.Text = "Transportadoras";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(252, 6);
             // 
             // funcionáriosToolStripMenuItem
             // 
@@ -127,7 +160,7 @@
             this.cadastroDeUsuáriosToolStripMenuItem,
             this.cadastroDePerfilToolStripMenuItem});
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             // 
             // cadastroDeFuncionáriosToolStripMenuItem
@@ -159,12 +192,36 @@
             this.cadastroDePerfilToolStripMenuItem.Text = "Cadastro de Perfil";
             this.cadastroDePerfilToolStripMenuItem.Click += new System.EventHandler(this.cadastroDePerfilToolStripMenuItem_Click);
             // 
+            // operaçõesComerciaisToolStripMenuItem
+            // 
+            this.operaçõesComerciaisToolStripMenuItem.Name = "operaçõesComerciaisToolStripMenuItem";
+            this.operaçõesComerciaisToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
+            this.operaçõesComerciaisToolStripMenuItem.Text = "Operações Comerciais";
+            // 
+            // cFOPToolStripMenuItem
+            // 
+            this.cFOPToolStripMenuItem.Name = "cFOPToolStripMenuItem";
+            this.cFOPToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
+            this.cFOPToolStripMenuItem.Text = "CFOP";
+            // 
+            // centroDeCustoToolStripMenuItem
+            // 
+            this.centroDeCustoToolStripMenuItem.Name = "centroDeCustoToolStripMenuItem";
+            this.centroDeCustoToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
+            this.centroDeCustoToolStripMenuItem.Text = "Centro de Custo";
+            // 
             // lojasToolStripMenuItem
             // 
             this.lojasToolStripMenuItem.Name = "lojasToolStripMenuItem";
-            this.lojasToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.lojasToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.lojasToolStripMenuItem.Text = "Lojas";
             this.lojasToolStripMenuItem.Click += new System.EventHandler(this.lojasToolStripMenuItem_Click);
+            // 
+            // planosDePagamentoToolStripMenuItem
+            // 
+            this.planosDePagamentoToolStripMenuItem.Name = "planosDePagamentoToolStripMenuItem";
+            this.planosDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
+            this.planosDePagamentoToolStripMenuItem.Text = "Planos de Pagamento";
             // 
             // caixasToolStripMenuItem
             // 
@@ -172,7 +229,7 @@
             this.cadastroDeUsuarioToolStripMenuItem,
             this.saldosDeCaixaToolStripMenuItem});
             this.caixasToolStripMenuItem.Name = "caixasToolStripMenuItem";
-            this.caixasToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.caixasToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.caixasToolStripMenuItem.Text = "Caixas";
             // 
             // cadastroDeUsuarioToolStripMenuItem
@@ -189,19 +246,137 @@
             this.saldosDeCaixaToolStripMenuItem.Text = "Cadastro de Saldos de Caixa";
             this.saldosDeCaixaToolStripMenuItem.Click += new System.EventHandler(this.saldosDeCaixaToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem2
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(216, 28);
-            this.toolStripMenuItem1.Text = "Transportadoras";
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(255, 28);
+            this.toolStripMenuItem2.Text = "Documentos";
+            // 
+            // bancosToolStripMenuItem
+            // 
+            this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
+            this.bancosToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
+            this.bancosToolStripMenuItem.Text = "Bancos";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1099, 103);
+            this.panel1.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::GUI.Properties.Resources.Novo;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(532, 1);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 99);
+            this.button6.TabIndex = 5;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::GUI.Properties.Resources.Configuracoes;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(427, 1);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(99, 99);
+            this.button5.TabIndex = 4;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::GUI.Properties.Resources.Contas;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(322, 1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 99);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::GUI.Properties.Resources.Vendas;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(217, 1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 99);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::GUI.Properties.Resources.Produtos;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(112, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 99);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(7, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 99);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(0, 141);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1099, 389);
+            this.panel2.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(713, 205);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(374, 171);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1099, 389);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 558);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -212,6 +387,10 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +416,21 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saldosDeCaixaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem operaçõesComerciaisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cFOPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem centroDeCustoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planosDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem bancosToolStripMenuItem;
     }
 }

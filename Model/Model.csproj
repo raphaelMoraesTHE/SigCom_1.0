@@ -60,6 +60,7 @@
     <Compile Include="ModeloCargosFuncoes.cs" />
     <Compile Include="ModeloEmpresa.cs" />
     <Compile Include="ModeloFuncionario.cs" />
+    <Compile Include="ModeloSaldoCaixa.cs" />
     <Compile Include="ModeloTabMunicipio.cs" />
     <Compile Include="ModeloTabUF.cs" />
     <Compile Include="ModeloUsuario.cs" />
