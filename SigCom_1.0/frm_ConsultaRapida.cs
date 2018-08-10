@@ -15,6 +15,7 @@ namespace GUI
     public partial class frm_ConsultaRapida : Form
     {
         public int codigo = 0;
+        public string valor = "";
 
         public frm_ConsultaRapida()
         {
@@ -171,6 +172,43 @@ namespace GUI
                     MessageBox.Show("Erro ao listar cargos e funções " + erro);
                 }
             }
+
+            if (valor == "cfop")
+            {
+                this.Text = "Consulta Rápida - CFOP";
+
+                try
+                {
+                    DAOConfiguraConexaoPostgres cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                    BLL_TabCFOP bll = new BLL_TabCFOP(cx);
+
+                    dgv_PesquisaRapida.DataSource = bll.lista_CFOP();
+
+                    //Definição de layout das colunas e cabeçalho do dataGrid.
+                    dgv_PesquisaRapida.RowHeadersWidth = 24;
+                    dgv_PesquisaRapida.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    dgv_PesquisaRapida.Columns[0].HeaderText = "Código";
+                    dgv_PesquisaRapida.Columns[0].Width = 60;
+                    dgv_PesquisaRapida.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    dgv_PesquisaRapida.Columns[1].HeaderText = "Descrição";
+                    dgv_PesquisaRapida.Columns[1].Width = 840;
+                    dgv_PesquisaRapida.Columns[2].HeaderText = "Ent/Sai";
+                    dgv_PesquisaRapida.Columns[2].Width = 60;
+                    dgv_PesquisaRapida.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgv_PesquisaRapida.Columns[3].HeaderText = "Dentro";
+                    dgv_PesquisaRapida.Columns[3].Width = 60;
+                    dgv_PesquisaRapida.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgv_PesquisaRapida.Columns[4].HeaderText = "Complemeto";
+                    dgv_PesquisaRapida.Columns[4].Width = 200;
+                    dgv_PesquisaRapida.Columns[5].HeaderText = "Imobil.";
+                    dgv_PesquisaRapida.Columns[5].Width = 60;
+                    dgv_PesquisaRapida.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao listar CFOP " + erro);
+                }
+            }
         }
 
         private void frm_ConsultaRapida_Load(object sender, EventArgs e)
@@ -213,6 +251,12 @@ namespace GUI
             {
                 cbx_PesquisaRapida.Items.Add("Descrição");
                 cbx_PesquisaRapida.Items.Add("Código");
+            }
+
+            if (this.Text == "Consulta Rápida - CFOP")
+            {
+                cbx_PesquisaRapida.Items.Add("Descrição");
+                cbx_PesquisaRapida.Items.Add("Natureza");
             }
 
             else
@@ -354,15 +398,74 @@ namespace GUI
                     }
                 }
             }
-        }        
+
+            if (this.Text == "Consulta Rápida - CFOP")
+            {
+                DAOConfiguraConexaoPostgres cx = new DAOConfiguraConexaoPostgres(DadosConexaoPostgres.StringDeConexaoPostgres);
+                BLL_TabCFOP bll = new BLL_TabCFOP(cx);
+                if (cbx_PesquisaRapida.SelectedIndex == 0)
+                {
+                    dgv_PesquisaRapida.DataSource = bll.pesquisa_CFOP_Descricao(txb_PesquisaRapida.Text);
+                }
+                if (cbx_PesquisaRapida.SelectedIndex == 1)
+                {
+                    dgv_PesquisaRapida.DataSource = bll.pesquisa_CFOP_Natureza(mtb_PesquisaRapida.Text);
+                }
+            }
+        }
+
+        private void cbx_PesquisaRapida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (this.Text == "Consulta Rápida - CFOP")
+            {
+                if (cbx_PesquisaRapida.SelectedIndex == 1)
+                {
+                    txb_PesquisaRapida.Visible = false;
+                    txb_PesquisaRapida.Clear();
+                    mtb_PesquisaRapida.Visible = true;
+                    mtb_PesquisaRapida.Mask = "9,999";
+                    mtb_PesquisaRapida.TabIndex = 2;
+                }
+                else
+                {
+                    txb_PesquisaRapida.Visible = true;
+                    mtb_PesquisaRapida.Visible = false;
+                    mtb_PesquisaRapida.Clear();
+                    txb_PesquisaRapida.TabIndex = 2;
+                }
+            }
+
+            else
+            {
+                txb_PesquisaRapida.Visible = true;
+                mtb_PesquisaRapida.Visible = false;
+                mtb_PesquisaRapida.Clear();
+                txb_PesquisaRapida.TabIndex = 2;
+            }
+        }
 
         private void dgv_PesquisaRapida_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (this.Text == "Consulta Rápida - CFOP")
             {
-                this.codigo = Convert.ToInt32(dgv_PesquisaRapida.Rows[e.RowIndex].Cells[0].Value);
-                this.Close();
+                if (e.RowIndex >= 0)
+                {                    
+                    this.valor = Convert.ToString(dgv_PesquisaRapida.Rows[e.RowIndex].Cells[0].Value);                    
+                    this.Close();
+                }
             }
+
+            else
+            {
+                if (e.RowIndex >= 0)
+                {
+                    this.codigo = Convert.ToInt32(dgv_PesquisaRapida.Rows[e.RowIndex].Cells[0].Value);
+                    this.Close();
+                }
+            }
+                
         }
+        
     }
 }

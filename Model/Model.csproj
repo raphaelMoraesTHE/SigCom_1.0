@@ -58,9 +58,12 @@
   <ItemGroup>
     <Compile Include="ModeloCaixa.cs" />
     <Compile Include="ModeloCargosFuncoes.cs" />
+    <Compile Include="ModeloCentroCustos.cs" />
     <Compile Include="ModeloEmpresa.cs" />
     <Compile Include="ModeloFuncionario.cs" />
+    <Compile Include="ModeloOpComerciais.cs" />
     <Compile Include="ModeloSaldoCaixa.cs" />
+    <Compile Include="ModeloTabCFOP.cs" />
     <Compile Include="ModeloTabMunicipio.cs" />
     <Compile Include="ModeloTabUF.cs" />
     <Compile Include="ModeloUsuario.cs" />

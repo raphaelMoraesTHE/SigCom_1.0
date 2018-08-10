@@ -118,6 +118,18 @@
     <Compile Include="frm_CadastroCargosFuncoes.Designer.cs">
       <DependentUpon>frm_CadastroCargosFuncoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_CadastroCentroCusto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroCentroCusto.Designer.cs">
+      <DependentUpon>frm_CadastroCentroCusto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CadastroCFOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroCFOP.Designer.cs">
+      <DependentUpon>frm_CadastroCFOP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CadastroEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,12 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_OperacoesComerciais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OperacoesComerciais.Designer.cs">
+      <DependentUpon>frm_OperacoesComerciais.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +204,12 @@
     <EmbeddedResource Include="frm_CadastroCargosFuncoes.resx">
       <DependentUpon>frm_CadastroCargosFuncoes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroCentroCusto.resx">
+      <DependentUpon>frm_CadastroCentroCusto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroCFOP.resx">
+      <DependentUpon>frm_CadastroCFOP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroEmpresa.resx">
       <DependentUpon>frm_CadastroEmpresa.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +231,9 @@
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_OperacoesComerciais.resx">
+      <DependentUpon>frm_OperacoesComerciais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Principal.resx">
       <DependentUpon>frm_Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,7 +243,6 @@
     <EmbeddedResource Include="frm_Relatorio.resx">
       <DependentUpon>frm_Relatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

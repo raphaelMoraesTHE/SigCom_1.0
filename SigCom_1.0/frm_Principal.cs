@@ -79,5 +79,26 @@ namespace GUI
             formularioCargosFuncoes.ShowDialog();
             formularioCargosFuncoes.Dispose();
         }
+
+        private void operaçõesComerciaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_OperacoesComerciais formularioOperacoesComerciais = new frm_OperacoesComerciais();
+            formularioOperacoesComerciais.ShowDialog();
+            formularioOperacoesComerciais.Dispose();
+        }
+
+        private void cFOPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroCFOP formularioCFOP = new frm_CadastroCFOP();
+            formularioCFOP.ShowDialog();
+            formularioCFOP.Dispose();
+        }
+
+        private void centroDeCustoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroCentroCusto formularioCentroCustos = new frm_CadastroCentroCusto();
+            formularioCentroCustos.ShowDialog();
+            formularioCentroCustos.Dispose();
+        }
     }
 }

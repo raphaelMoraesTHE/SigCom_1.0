@@ -63,6 +63,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.estoqueFaturamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.caixasBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -94,7 +100,13 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrosToolStripMenuItem});
+            this.cadastrosToolStripMenuItem,
+            this.estoqueFaturamentoToolStripMenuItem,
+            this.financeiroToolStripMenuItem,
+            this.chequesToolStripMenuItem,
+            this.caixasBancoToolStripMenuItem,
+            this.configuraçõesToolStripMenuItem,
+            this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1099, 31);
@@ -197,18 +209,21 @@
             this.operaçõesComerciaisToolStripMenuItem.Name = "operaçõesComerciaisToolStripMenuItem";
             this.operaçõesComerciaisToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.operaçõesComerciaisToolStripMenuItem.Text = "Operações Comerciais";
+            this.operaçõesComerciaisToolStripMenuItem.Click += new System.EventHandler(this.operaçõesComerciaisToolStripMenuItem_Click);
             // 
             // cFOPToolStripMenuItem
             // 
             this.cFOPToolStripMenuItem.Name = "cFOPToolStripMenuItem";
             this.cFOPToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.cFOPToolStripMenuItem.Text = "CFOP";
+            this.cFOPToolStripMenuItem.Click += new System.EventHandler(this.cFOPToolStripMenuItem_Click);
             // 
             // centroDeCustoToolStripMenuItem
             // 
             this.centroDeCustoToolStripMenuItem.Name = "centroDeCustoToolStripMenuItem";
             this.centroDeCustoToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.centroDeCustoToolStripMenuItem.Text = "Centro de Custo";
+            this.centroDeCustoToolStripMenuItem.Click += new System.EventHandler(this.centroDeCustoToolStripMenuItem_Click);
             // 
             // lojasToolStripMenuItem
             // 
@@ -359,14 +374,50 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1099, 389);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // estoqueFaturamentoToolStripMenuItem
+            // 
+            this.estoqueFaturamentoToolStripMenuItem.Name = "estoqueFaturamentoToolStripMenuItem";
+            this.estoqueFaturamentoToolStripMenuItem.Size = new System.Drawing.Size(197, 27);
+            this.estoqueFaturamentoToolStripMenuItem.Text = "Estoque / Faturamento";
+            // 
+            // financeiroToolStripMenuItem
+            // 
+            this.financeiroToolStripMenuItem.Name = "financeiroToolStripMenuItem";
+            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(100, 27);
+            this.financeiroToolStripMenuItem.Text = "Financeiro";
+            // 
+            // chequesToolStripMenuItem
+            // 
+            this.chequesToolStripMenuItem.Name = "chequesToolStripMenuItem";
+            this.chequesToolStripMenuItem.Size = new System.Drawing.Size(88, 27);
+            this.chequesToolStripMenuItem.Text = "Cheques";
+            // 
+            // caixasBancoToolStripMenuItem
+            // 
+            this.caixasBancoToolStripMenuItem.Name = "caixasBancoToolStripMenuItem";
+            this.caixasBancoToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.caixasBancoToolStripMenuItem.Text = "Caixas / Banco";
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(131, 27);
+            this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(66, 27);
+            this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // frm_Principal
             // 
@@ -432,5 +483,11 @@
         private System.Windows.Forms.ToolStripMenuItem planosDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem bancosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estoqueFaturamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem financeiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chequesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem caixasBancoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
 }
