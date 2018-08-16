@@ -170,10 +170,11 @@ namespace GUI
                     bll.altera_CentroCustos(obj_CentroCustos);
                 }
 
-                this.popula_Grid();
-                this.limpa_Campos();
+                //this.popula_Grid();
+                //this.limpa_Campos();
                 //this.desabilita_Campos();
-                this.altera_Botoes(1);
+                //this.altera_Botoes(1);
+                this.frm_CadastroCentroCusto_Load(sender, e);
                 tabControl1.SelectTab(0);
             }
             catch (Exception erro)
@@ -193,9 +194,10 @@ namespace GUI
                     BLL_CentroCustos bll = new BLL_CentroCustos(cx);
                     bll.excluir_CentroCustos(Convert.ToInt32(txb_CodigoCentroCustos.Text));
 
-                    this.popula_Grid();
-                    this.limpa_Campos();
-                    this.altera_Botoes(1);
+                    //this.popula_Grid();
+                    //this.limpa_Campos();
+                    //this.altera_Botoes(1);
+                    this.frm_CadastroCentroCusto_Load(sender, e);
                     tabControl1.SelectTab(0);
                 }
             }

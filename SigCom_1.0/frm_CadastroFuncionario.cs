@@ -347,9 +347,10 @@ namespace GUI
                     bll.altera_Funcionario(obj_Funcionario);
                 }
 
-                this.popula_Grid();
-                this.limpa_Campos();                
-                this.altera_Botoes(1);
+                //this.popula_Grid();
+                //this.limpa_Campos();                
+                //this.altera_Botoes(1);
+                this.frm_CadastroFuncionario_Load(sender, e);
                 tabControl1.SelectTab(0);
             }
             catch (Exception erro)
@@ -369,9 +370,10 @@ namespace GUI
                     BLL_Funcionario bll = new BLL_Funcionario(cx);
                     bll.excluir_Funcionario(Convert.ToInt32(txb_CodigoFuncionario.Text));
 
-                    this.popula_Grid();
-                    this.limpa_Campos();
-                    this.altera_Botoes(1);
+                    //this.popula_Grid();
+                    //this.limpa_Campos();
+                    //this.altera_Botoes(1);
+                    this.frm_CadastroFuncionario_Load(sender, e);
                     tabControl1.SelectTab(0);
                 }
             }

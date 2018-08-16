@@ -266,10 +266,11 @@ namespace GUI
                     bll.altera_Empresa(obj_Empresa);
                 }
 
-                this.popula_Grid();
-                this.limpa_Campos();
+                //this.popula_Grid();
+                //this.limpa_Campos();
                 //this.desabilita_Campos();
-                this.altera_Botoes(1);
+                //this.altera_Botoes(1);
+                this.frm_CadastroEmpresa_Load(sender, e);
                 tabControl1.SelectTab(0);
             }
             catch (Exception erro)
@@ -289,9 +290,10 @@ namespace GUI
                     BLL_Empresa bll = new BLL_Empresa(cx);
                     bll.excluir_Empresa(Convert.ToInt32(txb_CodigoEmpresa.Text));
 
-                    this.popula_Grid();
-                    this.limpa_Campos();
-                    this.altera_Botoes(1);
+                    //this.popula_Grid();
+                    //this.limpa_Campos();
+                    //this.altera_Botoes(1);
+                    this.frm_CadastroEmpresa_Load(sender, e);
                     tabControl1.SelectTab(0);
                 }
             }

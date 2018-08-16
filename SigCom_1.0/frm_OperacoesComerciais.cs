@@ -313,10 +313,11 @@ namespace GUI
                     bll.altera_OpComercial(obj_OpComercial);
                 }
 
-                this.popula_Grid();
-                this.limpa_Campos();
+                //this.popula_Grid();
+                //this.limpa_Campos();
                 //this.desabilita_Campos();
-                this.altera_Botoes(1);
+                //this.altera_Botoes(1);
+                this.frm_OperacoesComerciais_Load(sender, e);
                 tabControl1.SelectTab(0);
             }
             catch (Exception erro)
@@ -336,9 +337,10 @@ namespace GUI
                     BLL_OpComercial bll = new BLL_OpComercial(cx);
                     bll.excluir_OpComercial(Convert.ToInt32(txb_CodigoOpComercial.Text));
 
-                    this.popula_Grid();
-                    this.limpa_Campos();
-                    this.altera_Botoes(1);
+                    //this.popula_Grid();
+                    //this.limpa_Campos();
+                    //this.altera_Botoes(1);
+                    this.frm_OperacoesComerciais_Load(sender, e);
                     tabControl1.SelectTab(0);
                 }
             }

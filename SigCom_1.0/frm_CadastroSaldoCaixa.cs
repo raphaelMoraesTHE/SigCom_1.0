@@ -262,10 +262,11 @@ namespace GUI
                     bll.altera_SaldoCaixa(obj_SaldoCaixa);
                 }
 
-                this.popula_Grid();
-                this.limpa_Campos();
-                //this.desabilita_Campos();
-                this.altera_Botoes(1);
+                //this.popula_Grid();
+                //this.limpa_Campos();
+                ////this.desabilita_Campos();
+                //this.altera_Botoes(1);
+                this.frm_CadastroSaldoCaixa_Load(sender, e);
                 tabControl1.SelectTab(0);
             }
             catch (Exception erro)
@@ -285,9 +286,10 @@ namespace GUI
                     BLL_SaldoCaixa bll = new BLL_SaldoCaixa(cx);
                     bll.excluir_SaldoCaixa(Convert.ToInt32(txb_CodigoSaldoCaixa.Text));
 
-                    this.popula_Grid();
-                    this.limpa_Campos();
-                    this.altera_Botoes(1);
+                    //this.popula_Grid();
+                    //this.limpa_Campos();
+                    //this.altera_Botoes(1);
+                    this.frm_CadastroSaldoCaixa_Load(sender, e);
                     tabControl1.SelectTab(0);
                 }
             }
