@@ -100,5 +100,19 @@ namespace GUI
             formularioCentroCustos.ShowDialog();
             formularioCentroCustos.Dispose();
         }
+
+        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroDocumentos formularioDocumentos = new frm_CadastroDocumentos();
+            formularioDocumentos.ShowDialog();
+            formularioDocumentos.Dispose();
+        }
+
+        private void planosDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroPlanoPagamento formularioPlanoPagamento = new frm_CadastroPlanoPagamento();
+            formularioPlanoPagamento.ShowDialog();
+            formularioPlanoPagamento.Dispose();
+        }
     }
 }

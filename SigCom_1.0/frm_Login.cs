@@ -57,9 +57,9 @@ namespace GUI
                 {
                     frm_Principal formPrincipal = new frm_Principal(txb_Usuario.Text);
                     formPrincipal.Show();
-
-                    MessageBox.Show("Login realizado com sucesso!");
-                    this.Hide();
+                    
+                    this.Hide();                    
+                    MessageBox.Show("Login realizado com sucesso!");                    
                 }
                 else
                 {

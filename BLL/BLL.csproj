@@ -59,9 +59,11 @@
     <Compile Include="BLL_Caixa.cs" />
     <Compile Include="BLL_CargosFuncoes.cs" />
     <Compile Include="BLL_CentroCustos.cs" />
+    <Compile Include="BLL_Documentos.cs" />
     <Compile Include="BLL_Empresa.cs" />
     <Compile Include="BLL_Funcionario.cs" />
     <Compile Include="BLL_OpComercial.cs" />
+    <Compile Include="BLL_PlanosPagamento.cs" />
     <Compile Include="BLL_SaldoCaixa.cs" />
     <Compile Include="BLL_TabCFOP.cs" />
     <Compile Include="BLL_TabMunicipio.cs" />

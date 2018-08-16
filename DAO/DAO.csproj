@@ -62,9 +62,11 @@
     <Compile Include="DAO_Caixa.cs" />
     <Compile Include="DAO_CargosFuncoes.cs" />
     <Compile Include="DAO_CentroCustos.cs" />
+    <Compile Include="DAO_Documentos.cs" />
     <Compile Include="DAO_Empresa.cs" />
     <Compile Include="DAO_Funcionario.cs" />
     <Compile Include="DAO_OpComercial.cs" />
+    <Compile Include="DAO_PlanosPagamento.cs" />
     <Compile Include="DAO_SaldoCaixa.cs" />
     <Compile Include="DAO_TabCFOP.cs" />
     <Compile Include="DAO_TabMunicipio.cs" />

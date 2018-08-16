@@ -130,6 +130,12 @@
     <Compile Include="frm_CadastroCFOP.Designer.cs">
       <DependentUpon>frm_CadastroCFOP.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_CadastroDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroDocumentos.Designer.cs">
+      <DependentUpon>frm_CadastroDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CadastroEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,12 @@
     </Compile>
     <Compile Include="frm_CadastroPerfilUsuario.Designer.cs">
       <DependentUpon>frm_CadastroPerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CadastroPlanoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroPlanoPagamento.Designer.cs">
+      <DependentUpon>frm_CadastroPlanoPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_CadastroSaldoCaixa.cs">
       <SubType>Form</SubType>
@@ -210,6 +222,9 @@
     <EmbeddedResource Include="frm_CadastroCFOP.resx">
       <DependentUpon>frm_CadastroCFOP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroDocumentos.resx">
+      <DependentUpon>frm_CadastroDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroEmpresa.resx">
       <DependentUpon>frm_CadastroEmpresa.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroPerfilUsuario.resx">
       <DependentUpon>frm_CadastroPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroPlanoPagamento.resx">
+      <DependentUpon>frm_CadastroPlanoPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroSaldoCaixa.resx">
       <DependentUpon>frm_CadastroSaldoCaixa.cs</DependentUpon>
