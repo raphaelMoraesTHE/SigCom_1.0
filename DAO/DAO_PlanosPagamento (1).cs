@@ -27,11 +27,11 @@ namespace DAO
                 cmd.Connection = conexao_Postgres.ObjetoConexao;
                 cmd.CommandText = "INSERT INTO a_planopagto(c_descricao, c_pagamento, c_abreviacao, c_comissao, c_tpcomissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, " + 
                                                            "c_entrobrigatoria, c_altquantparc, c_altvalparc, c_valintparc, c_tpvencimento, c_maxparcelas, c_primeirovenc, c_limiteprimeirovenc, c_limiteultimovenc, " + 
-                                                           "c_vencparcelas, c_minentrada, c_jurosfincomentr, c_jurosfinsementr) " + 
+                                                           "c_vencparcelas, c_minentrada, c_jurosfincomentr, c_jurosfinsement) " + 
                                                            "VALUES " +
                                                            "(@descricao, @pagamento, @abreviacao, @comissao, @tpcomissao, @valminvenda, @maxdesconto, @descnota, @descitem, @precoprom, " +
                                                            "@entrobrigatoria, @altquantparc, @altvalparc, @valintparc, @tpvencimento, @maxparcelas, @primeirovenc, @limiteprimeirovenc, @limiteultimovenc, " +
-                                                           "@vencparcelas, @minentrada, @jurosfincomentr, @jurosfinsementr) RETURNING c_codigo;";
+                                                           "@vencparcelas, @minentrada, @jurosfincomentr, @jurosfinsement) RETURNING c_codigo;";
 
                 cmd.Parameters.AddWithValue("@descricao", planosPagamento.Descricao);
                 cmd.Parameters.AddWithValue("@pagamento", planosPagamento.Pagamento);
@@ -55,7 +55,7 @@ namespace DAO
                 cmd.Parameters.AddWithValue("@vencparcelas", planosPagamento.VencParcelas);
                 cmd.Parameters.AddWithValue("@minentrada", planosPagamento.MinEntrada);
                 cmd.Parameters.AddWithValue("@jurosfincomentr", planosPagamento.JurosFincomEntrada);
-                cmd.Parameters.AddWithValue("@jurosfinsementr", planosPagamento.JurosFinsemEmtrada);
+                cmd.Parameters.AddWithValue("@jurosfinsement", planosPagamento.JurosFinsemEmtrada);
                 
                 conexao_Postgres.Conectar();
                 planosPagamento.Codigo = Convert.ToInt32(cmd.ExecuteScalar());
@@ -78,7 +78,7 @@ namespace DAO
                 cmd.Connection = conexao_Postgres.ObjetoConexao;
                 cmd.CommandText = "UPDATE a_planopagto SET c_descricao = @descricao, c_pagamento = @pagamento, c_abreviacao = @abreviacao, c_comissao = @comissao, c_tpcomissao = @tpcomissao, c_valminvenda = @valminvenda, c_maxdesconto = @maxdesconto, c_descnota = @descnota, c_descitem = @descitem, " +
                                                           "c_precoprom = @precoprom, c_entrobrigatoria = @entrobrigatoria, c_altquantparc = @altquantparc, c_altvalparc = @altvalparc, c_valintparc = @valintparc, c_tpvencimento = @tpvencimento, c_maxparcelas = @maxparcelas, c_primeirovenc = @primeirovenc, " +
-                                                          "c_limiteprimeirovenc = @limiteprimeirovenc, c_limiteultimovenc = @limiteultimovenc, c_vencparcelas = @vencparcelas, c_minentrada = @minentrada, c_jurosfincomentr = @jurosfincomentr, c_jurosfinsementr = @jurosfinsementr " + 
+                                                          "c_limiteprimeirovenc = @limiteprimeirovenc, c_limiteultimovenc = @limiteultimovenc, c_vencparcelas = @vencparcelas, c_minentrada = @minentrada, c_jurosfincomentr = @jurosfincomentr, c_jurosfinsement = @jurosfinsement " + 
                                                           "WHERE c_codigo = @codigo;";
 
                 cmd.Parameters.AddWithValue("@codigo", planosPagamento.Codigo);
@@ -104,7 +104,7 @@ namespace DAO
                 cmd.Parameters.AddWithValue("@vencparcelas", planosPagamento.VencParcelas);
                 cmd.Parameters.AddWithValue("@minentrada", planosPagamento.MinEntrada);
                 cmd.Parameters.AddWithValue("@jurosfincomentr", planosPagamento.JurosFincomEntrada);
-                cmd.Parameters.AddWithValue("@jurosfinsementr", planosPagamento.JurosFinsemEmtrada);
+                cmd.Parameters.AddWithValue("@jurosfinsement", planosPagamento.JurosFinsemEmtrada);
 
                 conexao_Postgres.Conectar();
                 cmd.ExecuteNonQuery();
@@ -147,7 +147,7 @@ namespace DAO
             try
             {
                 DataTable tabela = new DataTable();
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_descricao, c_pagamento, c_abreviacao, c_comissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, c_jurosfincomentr, c_jurosfinsementr FROM a_planopagto WHERE c_descricao LIKE '" + pesquisa + "%'", conexao_Postgres.StringDeConexaoPostgres);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_descricao, c_pagamento, c_abreviacao, c_comissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, c_jurosfincomentr, c_jurosfinsement FROM a_planopagto WHERE c_descricao LIKE '" + pesquisa + "%'", conexao_Postgres.StringDeConexaoPostgres);
 
                 da.Fill(tabela);
 
@@ -164,7 +164,7 @@ namespace DAO
             try
             {
                 DataTable tabela = new DataTable();
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_descricao, c_pagamento, c_abreviacao, c_comissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, c_jurosfincomentr, c_jurosfinsementr FROM a_planopagto WHERE c_codigo = " + pesquisa, conexao_Postgres.StringDeConexaoPostgres);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_descricao, c_pagamento, c_abreviacao, c_comissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, c_jurosfincomentr, c_jurosfinsement FROM a_planopagto WHERE c_codigo = " + pesquisa, conexao_Postgres.StringDeConexaoPostgres);
 
                 da.Fill(tabela);
 
@@ -181,7 +181,7 @@ namespace DAO
             try
             {
                 DataTable tabela = new DataTable();
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_descricao, c_pagamento, c_abreviacao, c_comissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, c_jurosfincomentr, c_jurosfinsementr FROM a_planopagto ORDER BY c_codigo", conexao_Postgres.StringDeConexaoPostgres);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter("SELECT c_codigo, c_descricao, c_pagamento, c_abreviacao, c_comissao, c_valminvenda, c_maxdesconto, c_descnota, c_descitem, c_precoprom, c_jurosfincomentr, c_jurosfinsement FROM a_planopagto ORDER BY c_codigo", conexao_Postgres.StringDeConexaoPostgres);
 
                 da.Fill(tabela);
 
@@ -251,8 +251,8 @@ namespace DAO
                 modelo.LimiteUltimoVenc = Convert.ToInt32(dt["c_limiteultimovenc"]);
                 modelo.VencParcelas = Convert.ToInt32(dt["c_vencparcelas"]);
                 modelo.MinEntrada = Convert.ToDouble(dt["c_minentrada"]);
-                modelo.JurosFincomEntrada = Convert.ToDouble(dt["c_jurosfincomentr"]);
-                modelo.JurosFinsemEmtrada = Convert.ToDouble(dt["c_jurosfinsementr"]);
+                modelo.JurosFincomEntrada = Convert.ToDouble(dt["c_jurosfincomentrada"]);
+                modelo.JurosFinsemEmtrada = Convert.ToDouble(dt["c_jurosfinsementrada"]);
             }
 
             conexao_Postgres.Desconectar();

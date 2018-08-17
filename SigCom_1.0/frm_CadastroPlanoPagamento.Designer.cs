@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroPlanoPagamento));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -126,7 +126,6 @@
             this.btn_AlterarPlanosPagamento = new System.Windows.Forms.Button();
             this.btn_GravarPlanosPagamento = new System.Windows.Forms.Button();
             this.btn_NovoPlanosPagamento = new System.Windows.Forms.Button();
-            this.doubleTextBox1 = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CadastroPlanosPagamento)).BeginInit();
@@ -148,7 +147,6 @@
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleTextBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -186,14 +184,14 @@
             this.dgv_CadastroPlanosPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_CadastroPlanosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_CadastroPlanosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_CadastroPlanosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_CadastroPlanosPagamento.Location = new System.Drawing.Point(7, 80);
             this.dgv_CadastroPlanosPagamento.Name = "dgv_CadastroPlanosPagamento";
@@ -377,7 +375,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.doubleTextBox1);
             this.tabPage3.Controls.Add(this.checkBox2);
             this.tabPage3.Controls.Add(this.checkBox1);
             this.tabPage3.Controls.Add(this.textBox12);
@@ -1321,7 +1318,7 @@
             this.rbt_VencDiasPlanosPagamento.Size = new System.Drawing.Size(93, 22);
             this.rbt_VencDiasPlanosPagamento.TabIndex = 85;
             this.rbt_VencDiasPlanosPagamento.TabStop = true;
-            this.rbt_VencDiasPlanosPagamento.Tag = "07";
+            this.rbt_VencDiasPlanosPagamento.Tag = "D";
             this.rbt_VencDiasPlanosPagamento.Text = "Em Dias";
             this.rbt_VencDiasPlanosPagamento.UseVisualStyleBackColor = true;
             // 
@@ -1332,7 +1329,7 @@
             this.rbt_VencMesesPlanosPagamento.Name = "rbt_VencMesesPlanosPagamento";
             this.rbt_VencMesesPlanosPagamento.Size = new System.Drawing.Size(109, 22);
             this.rbt_VencMesesPlanosPagamento.TabIndex = 84;
-            this.rbt_VencMesesPlanosPagamento.Tag = "01";
+            this.rbt_VencMesesPlanosPagamento.Tag = "M";
             this.rbt_VencMesesPlanosPagamento.Text = "Em Meses";
             this.rbt_VencMesesPlanosPagamento.UseVisualStyleBackColor = true;
             // 
@@ -1548,24 +1545,6 @@
             this.btn_NovoPlanosPagamento.UseVisualStyleBackColor = true;
             this.btn_NovoPlanosPagamento.Click += new System.EventHandler(this.btn_NovoPlanosPagamento_Click);
             // 
-            // doubleTextBox1
-            // 
-            this.doubleTextBox1.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.doubleTextBox1.BeforeTouchSize = new System.Drawing.Size(81, 27);
-            this.doubleTextBox1.DoubleValue = 1D;
-            this.doubleTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.doubleTextBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.doubleTextBox1.Location = new System.Drawing.Point(743, 104);
-            this.doubleTextBox1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.doubleTextBox1.Name = "doubleTextBox1";
-            this.doubleTextBox1.NullString = "";
-            this.doubleTextBox1.PositiveColor = System.Drawing.SystemColors.HotTrack;
-            this.doubleTextBox1.Size = new System.Drawing.Size(81, 27);
-            this.doubleTextBox1.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.doubleTextBox1.TabIndex = 74;
-            this.doubleTextBox1.Text = "1,00";
-            this.doubleTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // frm_CadastroPlanoPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1611,7 +1590,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.doubleTextBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1713,6 +1691,5 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label22;
-        private Syncfusion.Windows.Forms.Tools.DoubleTextBox doubleTextBox1;
     }
 }
