@@ -106,6 +106,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_CadastroBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroBancos.Designer.cs">
+      <DependentUpon>frm_CadastroBancos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CadastroCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_CadastroBancos.resx">
+      <DependentUpon>frm_CadastroBancos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroCaixa.resx">
       <DependentUpon>frm_CadastroCaixa.cs</DependentUpon>
     </EmbeddedResource>

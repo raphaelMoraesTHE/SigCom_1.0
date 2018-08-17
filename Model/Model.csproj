@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModeloBancos.cs" />
     <Compile Include="ModeloCaixa.cs" />
     <Compile Include="ModeloCargosFuncoes.cs" />
     <Compile Include="ModeloCentroCustos.cs" />

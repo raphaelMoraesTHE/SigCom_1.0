@@ -114,5 +114,12 @@ namespace GUI
             formularioPlanoPagamento.ShowDialog();
             formularioPlanoPagamento.Dispose();
         }
+
+        private void bancosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroBancos formularioBancos = new frm_CadastroBancos();
+            formularioBancos.ShowDialog();
+            formularioBancos.Dispose();
+        }
     }
 }

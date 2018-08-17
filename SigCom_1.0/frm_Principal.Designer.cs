@@ -274,6 +274,7 @@
             this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
             this.bancosToolStripMenuItem.Size = new System.Drawing.Size(255, 28);
             this.bancosToolStripMenuItem.Text = "Bancos";
+            this.bancosToolStripMenuItem.Click += new System.EventHandler(this.bancosToolStripMenuItem_Click);
             // 
             // estoqueFaturamentoToolStripMenuItem
             // 
